@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Eyebrow } from '../components/Eyebrow'
+import { useLang } from '../i18n/LangContext'
 
 const wrap: React.CSSProperties = { maxWidth: 1120, margin: '0 auto', padding: '0 40px' }
 
 interface Project {
   name: string
-  description: string
   category: 'AI & Agents' | 'Web & Desktop' | 'Developer Tools'
   tags: string[]
   stars: number
@@ -13,13 +13,9 @@ interface Project {
   url: string
 }
 
-// ==========================================
-// 您的 GitHub 真实项目数据
-// ==========================================
 const PROJECTS: Project[] = [
   {
     name: 'multica',
-    description: '开源托管式智能体平台。将编程智能体转化为真正的团队成员——分配任务、跟踪进度、复利累积技能',
     category: 'AI & Agents',
     tags: ['AI Agent', 'Orchestration', 'Platform'],
     stars: 0,
@@ -28,7 +24,6 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'everything-claude-code-zh',
-    description: 'everything-claude-code 中文翻译与实战项目：完整的 Claude Code 配置集合（agents, skills, hooks, commands, rules, MCPs）。源自 Anthropic 黑客松获胜者的实战配置',
     category: 'AI & Agents',
     tags: ['Claude Code', 'Config', 'Translation'],
     stars: 0,
@@ -37,7 +32,6 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'Claude-Code-x-OpenClaw-Guide-Zh',
-    description: '从零到企业实战：Claude Code 官方编程神器 + OpenClaw 开源 AI 助手中文双顶流实战教程，深度解析 AI 辅助编程最佳实践',
     category: 'AI & Agents',
     tags: ['AI Agent', 'Tutorial', 'Guide'],
     stars: 0,
@@ -46,7 +40,6 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'TradingAgents-CN',
-    description: '基于多智能体（Multi-Agent）大模型的中文金融交易与量化投资框架，TradingAgents 中文增强版',
     category: 'AI & Agents',
     tags: ['Multi-Agent', 'LLM', 'Quantitative Trading'],
     stars: 0,
@@ -55,7 +48,6 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'Download-monitor',
-    description: '一款智能的命令行下载监控工具，带有精美的 Web 仪表盘，支持实时速度追踪和任务管理',
     category: 'Web & Desktop',
     tags: ['JavaScript', 'CLI', 'Web Dashboard'],
     stars: 0,
@@ -64,7 +56,6 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'lan-file-transfer',
-    description: '基于 Electron 构建的 Windows 和 macOS 局域网文件互传桌面端应用，界面精美，传输速度极快',
     category: 'Web & Desktop',
     tags: ['Electron', 'JavaScript', 'LAN Transfer'],
     stars: 0,
@@ -73,7 +64,6 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'mcp-jobs',
-    description: '基于 Model Context Protocol (MCP) 实现的招聘信息抓取服务，支持获取猎聘、Boss直聘、智联招聘、51job的职位信息',
     category: 'Developer Tools',
     tags: ['MCP Server', 'Python', 'Web Scraper'],
     stars: 0,
@@ -82,7 +72,6 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'gstack',
-    description: '开箱即用的 Garry Tan (Y Combinator 总裁) 精选 Claude Code 配置套件，集成 CEO、设计师、开发经理、发布经理等 23 项定制化角色与工具',
     category: 'AI & Agents',
     tags: ['Claude Code', 'Agent Toolkit', 'Configuration'],
     stars: 0,
@@ -91,7 +80,6 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'claude_code_src',
-    description: 'Claude Code 命令行工具核心机制与结构解析（基于还原后的 cli.js 代码），深度拆解 AI 辅助编程神器的内部实现原理',
     category: 'Developer Tools',
     tags: ['Reverse Engineering', 'Claude Code', 'Internal'],
     stars: 0,
@@ -102,6 +90,7 @@ const PROJECTS: Project[] = [
 
 export function Lab() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  const { t } = useLang()
 
   const categories = ['All', 'AI & Agents', 'Web & Desktop', 'Developer Tools']
 
@@ -114,12 +103,12 @@ export function Lab() {
       {/* Hero Header */}
       <header style={{ padding: '96px 0 54px' }}>
         <div style={wrap}>
-          <Eyebrow>Open Source & Personal Sandbox</Eyebrow>
+          <Eyebrow>{t('lab.eyebrow')}</Eyebrow>
           <h1 style={{ font: 'var(--type-hero)', letterSpacing: 'var(--tracking-display)', margin: '24px 0 20px' }}>
-            实验室 / Lab
+            {t('lab.title')}
           </h1>
           <p style={{ fontSize: 'var(--text-lead)', lineHeight: 'var(--leading-body)', color: 'var(--color-muted)', maxWidth: 720, margin: 0 }}>
-            这里是我在日常开发、技术研究与业余时间中沉淀的开源项目与实验工具。所有项目均发布于 GitHub，欢迎 Star 或贡献代码
+            {t('lab.sub')}
           </p>
         </div>
       </header>
@@ -132,7 +121,7 @@ export function Lab() {
             return (
               <FilterTab
                 key={cat}
-                label={cat}
+                label={cat === 'All' ? t('lab.all') : cat}
                 active={isActive}
                 onClick={() => setSelectedCategory(cat)}
               />
@@ -149,9 +138,10 @@ export function Lab() {
             gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
             gap: 24,
           }}>
-            {filteredProjects.map(proj => (
-              <ProjectCard key={proj.name} project={proj} />
-            ))}
+            {filteredProjects.map((proj) => {
+              const origIdx = PROJECTS.indexOf(proj)
+              return <ProjectCard key={proj.name} project={proj} description={t(`lab.projects.${origIdx}`)} />
+            })}
           </div>
         </div>
       </section>
@@ -180,15 +170,15 @@ function FilterTab({ label, active, onClick }: { label: string; active: boolean;
         transition: 'all var(--dur) var(--ease-out)',
       }}
     >
-      {label === 'All' ? '全部' : label}
+      {label}
     </button>
   )
 }
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, description }: { project: Project; description: string }) {
   const [hover, setHover] = useState(false)
+  const { t } = useLang()
 
-  // 类别对应的标记颜色
   const catColors: Record<string, string> = {
     'AI & Agents': 'var(--color-steel)',
     'Web & Desktop': '#3572A5',
@@ -276,7 +266,7 @@ function ProjectCard({ project }: { project: Project }) {
           textOverflow: 'ellipsis',
           minHeight: '78px'
         }}>
-          {project.description}
+          {description}
         </p>
       </div>
 
@@ -315,7 +305,7 @@ function ProjectCard({ project }: { project: Project }) {
             transition: 'color var(--dur) var(--ease-out)',
           }}
         >
-          查看仓库
+          {t('lab.viewRepo')}
         </a>
       </div>
     </article>
