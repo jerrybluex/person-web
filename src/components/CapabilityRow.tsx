@@ -1,8 +1,12 @@
-import React from 'react'
+import { useState } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
-/** A capability line for the inverted dark block: index + label, nudges right on hover. */
-export function CapabilityRow({ index, children, style }) {
-  const [hover, setHover] = React.useState(false)
+export function CapabilityRow({ index, children, style }: {
+  index?: string
+  children?: ReactNode
+  style?: CSSProperties
+}) {
+  const [hover, setHover] = useState(false)
   return (
     <div
       onMouseEnter={() => setHover(true)}

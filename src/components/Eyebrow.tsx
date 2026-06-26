@@ -1,7 +1,11 @@
-import React from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
-/** Letter-spaced steel kicker that opens every section. Latin small-caps style. */
-export function Eyebrow({ children, tone = 'steel', style, ...rest }) {
+export function Eyebrow({ children, tone = 'steel', style, ...rest }: {
+  children?: ReactNode
+  tone?: 'steel' | 'onDark'
+  style?: CSSProperties
+  [key: string]: unknown
+}) {
   const color = tone === 'onDark' ? 'var(--color-steel-soft)' : 'var(--color-steel)'
   return (
     <p

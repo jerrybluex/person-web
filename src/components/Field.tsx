@@ -1,12 +1,16 @@
-import React from 'react'
+import { useState } from 'react'
+import type { CSSProperties } from 'react'
 
-/**
- * Labelled form field. Renders a label over an input / select / textarea, all
- * sharing the sharp 2px, steel-focus treatment. `as` picks the control.
- */
-export function Field({ label, as = 'input', options = [], wide = false, style, ...rest }) {
-  const [focus, setFocus] = React.useState(false)
-  const control = {
+export function Field({ label, as = 'input', options = [], wide = false, style, ...rest }: {
+  label: string
+  as?: 'input' | 'select' | 'textarea'
+  options?: string[]
+  wide?: boolean
+  style?: CSSProperties
+  [key: string]: unknown
+}) {
+  const [focus, setFocus] = useState(false)
+  const control: CSSProperties = {
     fontFamily: 'var(--font-sans)',
     fontSize: '15px',
     fontWeight: 400,
@@ -20,7 +24,7 @@ export function Field({ label, as = 'input', options = [], wide = false, style, 
     transition: 'border-color var(--dur), box-shadow var(--dur)',
     width: '100%',
   }
-  const shared = { style: control, onFocus: () => setFocus(true), onBlur: () => setFocus(false), ...rest }
+  const shared = { onFocus: () => setFocus(true), onBlur: () => setFocus(false), ...rest }
   return (
     <label
       style={{
@@ -36,15 +40,15 @@ export function Field({ label, as = 'input', options = [], wide = false, style, 
     >
       {label}
       {as === 'select' ? (
-        <select {...shared}>
+        <select style={control} {...shared}>
           {options.map((o) => (
             <option key={o}>{o}</option>
           ))}
         </select>
       ) : as === 'textarea' ? (
-        <textarea {...shared} style={{ ...control, resize: 'vertical' }} />
+        <textarea style={{ ...control, resize: 'vertical' }} {...shared} />
       ) : (
-        <input {...shared} />
+        <input style={control} {...shared} />
       )}
     </label>
   )

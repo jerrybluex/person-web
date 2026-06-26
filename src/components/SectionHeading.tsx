@@ -1,8 +1,15 @@
-import React from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Eyebrow } from './Eyebrow'
 
-/** Eyebrow + medium-weight headline + optional lead. The standard section opener. */
-export function SectionHeading({ eyebrow, title, sub, tone = 'light', align = 'left', maxWidth = 760, style }) {
+export function SectionHeading({ eyebrow, title, sub, tone = 'light', align = 'left', maxWidth = 760, style }: {
+  eyebrow?: string
+  title: ReactNode
+  sub?: ReactNode
+  tone?: 'light' | 'dark'
+  align?: 'left' | 'center'
+  maxWidth?: number
+  style?: CSSProperties
+}) {
   const onDark = tone === 'dark'
   return (
     <div style={{ maxWidth, textAlign: align, ...style }}>

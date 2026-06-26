@@ -1,7 +1,10 @@
-import React from 'react'
+import type { CSSProperties } from 'react'
 
-/** A single figure in the hairline-ruled hero stat strip: big value + small label. */
-export function StatBlock({ value, label, style }) {
+export function StatBlock({ value, label, style }: {
+  value: string
+  label: string
+  style?: CSSProperties
+}) {
   return (
     <div style={{ ...style }}>
       <b

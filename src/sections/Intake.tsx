@@ -1,25 +1,25 @@
-/* global React */
-// NEXMIND site — interactive intake form (the one stateful section).
-const NSf = window.NEXMINDAIDesignSystem_999124;
-const { Eyebrow: EyebrowF, Field, Button: ButtonF } = NSf;
+import React, { useState } from 'react'
+import { Eyebrow } from '../components/Eyebrow'
+import { Field } from '../components/Field'
+import { Button } from '../components/Button'
 
-const wrapF = { maxWidth: 1120, margin: '0 auto', padding: '0 40px' };
+const wrap: React.CSSProperties = { maxWidth: 1120, margin: '0 auto', padding: '0 40px' }
 
-function Intake() {
-  const [sent, setSent] = React.useState(false);
+export function Intake() {
+  const [sent, setSent] = useState(false)
   return (
     <section id="contact" style={{ paddingBottom: 104 }}>
-      <div style={wrapF}>
+      <div style={wrap}>
         <div style={{ display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 64, background: 'var(--color-white)', border: '1px solid var(--border-hair)', borderRadius: 'var(--radius-md)', padding: 60 }}>
           <div>
-            <EyebrowF>Project Intake</EyebrowF>
+            <Eyebrow>Project Intake</Eyebrow>
             <h2 style={{ font: 'var(--type-h2)', letterSpacing: 'var(--tracking-display)', margin: '16px 0 16px' }}>告诉我们，智能<br />应该出现在哪里。</h2>
             <p style={{ color: 'var(--color-muted)', fontSize: 15, lineHeight: 'var(--leading-body)', margin: 0 }}>
               留下你的业务问题。首版表单仅做本地校验，正式上线时可接入邮件、飞书、企业微信或 CRM。
             </p>
           </div>
           <form
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+            onSubmit={(e) => { e.preventDefault(); setSent(true) }}
             style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}
           >
             <Field label="姓名" placeholder="例如：李先生" required />
@@ -32,14 +32,12 @@ function Intake() {
                 已收到咨询信息。正式接入后即可发送给团队。
               </p>
             )}
-            <ButtonF as="button" type="submit" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: 15 }}>
+            <Button as="button" type="submit" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: 15 }}>
               {sent ? '已提交 ✓' : '提交咨询'}
-            </ButtonF>
+            </Button>
           </form>
         </div>
       </div>
     </section>
-  );
+  )
 }
-
-window.Intake = Intake;

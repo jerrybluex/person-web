@@ -1,11 +1,14 @@
-import React from 'react'
+import { useState } from 'react'
+import type { CSSProperties } from 'react'
 
-/**
- * Service / capability card. Index number + small Latin label + Chinese title + body.
- * Used in the bordered 3-up grid; fills faintly on hover.
- */
-export function ServiceCard({ index, label, title, body, style }) {
-  const [hover, setHover] = React.useState(false)
+export function ServiceCard({ index, label, title, body, style }: {
+  index?: string
+  label?: string
+  title: string
+  body: string
+  style?: CSSProperties
+}) {
+  const [hover, setHover] = useState(false)
   return (
     <article
       onMouseEnter={() => setHover(true)}

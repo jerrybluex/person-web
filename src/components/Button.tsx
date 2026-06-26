@@ -1,14 +1,18 @@
-import React from 'react'
+import { useState, type ElementType } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
-/**
- * NEXMIND primary action. Sharp 2px corners, medium-weight label.
- * `primary` = filled slate ink; `ghost` = hairline outline on paper.
- */
-export function Button({ variant = 'primary', size = 'md', as = 'button', children, style, ...rest }) {
-  const [hover, setHover] = React.useState(false)
+export function Button({ variant = 'primary', size = 'md', as = 'button', children, style, ...rest }: {
+  variant?: 'primary' | 'ghost'
+  size?: 'sm' | 'md' | 'lg'
+  as?: string
+  children?: ReactNode
+  style?: CSSProperties
+  [key: string]: unknown
+}) {
+  const [hover, setHover] = useState(false)
   const pad = size === 'sm' ? '10px 18px' : size === 'lg' ? '16px 30px' : '14px 26px'
   const fs = size === 'sm' ? '14px' : '15px'
-  const base = {
+  const base: CSSProperties = {
     display: 'inline-block',
     padding: pad,
     borderRadius: 'var(--radius)',
@@ -22,7 +26,7 @@ export function Button({ variant = 'primary', size = 'md', as = 'button', childr
     textDecoration: 'none',
     transition: 'background var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out)',
   }
-  const variants = {
+  const variants: Record<string, CSSProperties> = {
     primary: {
       background: hover ? '#000' : 'var(--color-slate-ink)',
       color: 'var(--color-paper)',
@@ -33,7 +37,7 @@ export function Button({ variant = 'primary', size = 'md', as = 'button', childr
       borderColor: hover ? 'var(--color-slate-ink)' : 'var(--border-hair)',
     },
   }
-  const Tag = as
+  const Tag = as as ElementType
   return (
     <Tag
       style={{ ...base, ...variants[variant], ...style }}

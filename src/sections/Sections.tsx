@@ -1,14 +1,17 @@
-/* global React */
-// NEXMIND site — stateless display sections. Loaded via in-browser Babel in
-// index.html (React is a UMD global; design-system components come from the
-// compiled bundle namespace). Each section is exported on window for app.jsx.
-const NS = window.NEXMINDAIDesignSystem_999124;
-const { Button, Eyebrow, SectionHeading, StatBlock, ServiceCard, CapabilityRow, StepCard, BrandMark } = NS;
+import React from 'react'
+import { Button } from '../components/Button'
+import { Eyebrow } from '../components/Eyebrow'
+import { SectionHeading } from '../components/SectionHeading'
+import { StatBlock } from '../components/StatBlock'
+import { ServiceCard } from '../components/ServiceCard'
+import { CapabilityRow } from '../components/CapabilityRow'
+import { StepCard } from '../components/StepCard'
+import { BrandMark } from '../components/BrandMark'
 
-const wrap = { maxWidth: 1120, margin: '0 auto', padding: '0 40px' };
+const wrap: React.CSSProperties = { maxWidth: 1120, margin: '0 auto', padding: '0 40px' }
 
-function Nav() {
-  const links = [['服务', '#services'], ['系统', '#system'], ['交付', '#delivery']];
+export function Nav() {
+  const links: [string, string][] = [['服务', '#services'], ['系统', '#system'], ['交付', '#delivery']]
   return (
     <nav style={{ position: 'sticky', top: 0, zIndex: 20, background: 'rgba(238,240,242,.86)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-hair-soft)' }}>
       <div style={{ ...wrap, padding: '20px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -23,11 +26,11 @@ function Nav() {
         <Button size="sm" variant="ghost" as="a" href="#contact">预约方案诊断</Button>
       </div>
     </nav>
-  );
+  )
 }
 
-function Hero() {
-  const stats = [['2–4 周', '原型链路验证'], ['端云一体', '设备 + 私有部署'], ['可观测', '可授权 · 可运维'], ['3 条业务线', '硬件 / 智能体 / 模型']];
+export function Hero() {
+  const stats: [string, string][] = [['2–4 周', '原型链路验证'], ['端云一体', '设备 + 私有部署'], ['可观测', '可授权 · 可运维'], ['3 条业务线', '硬件 / 智能体 / 模型']]
   return (
     <header id="top" style={{ padding: '108px 0 0' }}>
       <div style={wrap}>
@@ -54,15 +57,15 @@ function Hero() {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-function Services() {
-  const items = [
+export function Services() {
+  const items: [string, string, string, string][] = [
     ['01', 'Edge Hardware', '智能硬件开发', '传感器、边缘推理、设备云与工业设计一体化，让 AI 能力进入真实终端。'],
     ['02', 'Agent System', '智能体开发与部署', '为销售、运营、客服和研发流程构建可观测、可授权、可接入企业系统的智能体。'],
     ['03', 'Custom Model', '大模型定制', '围绕行业语料、私有部署和任务指标，完成微调、评测、压缩与长期运维。'],
-  ];
+  ]
   return (
     <section id="services" style={{ padding: '84px 0 104px' }}>
       <div style={wrap}>
@@ -75,11 +78,11 @@ function Services() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-function SystemLayers() {
-  const caps = [['01', '多模态感知'], ['02', '边缘推理'], ['03', 'RAG 知识工程'], ['04', 'Agent 编排'], ['05', '模型微调'], ['06', '私有化部署']];
+export function SystemLayers() {
+  const caps: [string, string][] = [['01', '多模态感知'], ['02', '边缘推理'], ['03', 'RAG 知识工程'], ['04', 'Agent 编排'], ['05', '模型微调'], ['06', '私有化部署']]
   return (
     <section id="system" style={{ paddingBottom: 104 }}>
       <div style={wrap}>
@@ -93,16 +96,16 @@ function SystemLayers() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-function Delivery() {
-  const steps = [
+export function Delivery() {
+  const steps: [string, string, string][] = [
     ['01', '诊断业务场景', '先聊业务问题，确认智能应该出现在哪里。'],
     ['02', '验证原型链路', '2–4 周搭出可跑通的原型链路。'],
     ['03', '集成企业系统', '接入权限、数据与现有业务系统。'],
     ['04', '进入生产迭代', '建立评测与运维，持续演进。'],
-  ];
+  ]
   return (
     <section id="delivery" style={{ paddingBottom: 104 }}>
       <div style={wrap}>
@@ -112,10 +115,10 @@ function Delivery() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-function SiteFooter() {
+export function SiteFooter() {
   return (
     <footer style={{ borderTop: '1px solid var(--border-hair)', padding: '48px 0' }}>
       <div style={{ ...wrap, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -123,7 +126,5 @@ function SiteFooter() {
         <span style={{ fontSize: 13, color: 'var(--color-faint)', letterSpacing: '.04em' }}>Intelligent Hardware / Agent Systems / Custom LLMs</span>
       </div>
     </footer>
-  );
+  )
 }
-
-Object.assign(window, { Nav, Hero, Services, SystemLayers, Delivery, SiteFooter });
