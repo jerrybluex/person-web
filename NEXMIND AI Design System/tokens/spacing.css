@@ -1,0 +1,27 @@
+/* NEXMIND AI — Spacing & layout tokens (Cool-Editorial direction)
+ * Generous, editorial rhythm. Sections breathe at 104px; content maxes at 1120px
+ * with 40px gutters. The scale stays calm and even.
+ */
+:root {
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;   /* page gutter */
+  --space-56: 56px;   /* section-head → content */
+  --space-64: 64px;   /* large internal padding (dark blocks, intake) */
+  --space-84: 84px;
+  --space-104: 104px; /* default section vertical padding */
+  --space-128: 128px;
+
+  /* Layout */
+  --page-max-width: 1120px;
+  --gutter: 40px;
+  --section-padding-y: 104px;
+  --nav-padding-y: 20px;
+  --card-padding: 40px;
+}

@@ -1,0 +1,48 @@
+/* NEXMIND AI — Color tokens (Cool-Editorial direction)
+ * A calm, non-"tech" palette: cool off-white canvas, graphite-slate ink, one
+ * restrained steel-blue accent, and a cool dark block for inversion. No warm
+ * tones, no gradients, no glow. Structure comes from hairlines and whitespace.
+ */
+:root {
+  /* ---- Cool neutrals (page + surfaces) ---- */
+  --color-paper: #eef0f2;     /* page canvas — cool off-white */
+  --color-paper-2: #e6e9ec;   /* slightly recessed cool grey */
+  --color-card: #f7f8f9;      /* hover / raised card fill */
+  --color-white: #ffffff;     /* form + intake panels */
+
+  /* ---- Ink ramp (cool, graphite) ---- */
+  --color-slate-ink: #1a2330; /* primary text, near-black (cool) */
+  --color-slate-2: #3a4659;   /* strong secondary / form labels */
+  --color-muted: #626c7a;     /* body secondary text */
+  --color-faint: #949ba6;     /* tertiary / captions */
+
+  /* ---- Cool dark block (inverted sections — NO glow) ---- */
+  --color-dark: #161c26;
+  --color-dark-2: #1f2733;
+
+  /* ---- The single restrained accent ---- */
+  --color-steel: #3d5a73;       /* eyebrows, focus, small marks */
+  --color-steel-bright: #4f7390;/* hover / brighter steel */
+  --color-steel-soft: #cdd7df;  /* faint steel for inverted captions */
+
+  /* ---- Borders (hairlines do the structural work) ---- */
+  --border-hair: rgba(26, 35, 48, 0.14);
+  --border-hair-soft: rgba(26, 35, 48, 0.08);
+  --border-hair-strong: rgba(26, 35, 48, 0.26);
+  --border-on-dark: rgba(255, 255, 255, 0.14);
+  --border-on-dark-soft: rgba(255, 255, 255, 0.10);
+
+  /* ---- Semantic aliases ---- */
+  --bg-page: var(--color-paper);
+  --surface-card: var(--color-card);
+  --surface-panel: var(--color-white);
+  --surface-dark: var(--color-dark);
+
+  --text-primary: var(--color-slate-ink);
+  --text-secondary: var(--color-muted);
+  --text-muted: var(--color-faint);
+  --text-on-dark: var(--color-paper);
+
+  --accent: var(--color-steel);
+  --focus-ring: var(--color-steel);
+}

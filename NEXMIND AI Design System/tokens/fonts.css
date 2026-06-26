@@ -1,0 +1,9 @@
+/* NEXMIND AI — Webfonts
+ * The product ships with Aptos (Latin) + Microsoft YaHei UI (Chinese); neither is
+ * freely redistributable, so this system substitutes the closest Google Fonts match:
+ *   - Aptos              → Hanken Grotesk  (humanist grotesque, similar warmth/proportions)
+ *   - Microsoft YaHei UI → Noto Sans SC    (clean gothic CJK)
+ * Flagged to the user — swap in the licensed Aptos + YaHei web binaries when available.
+ * The cool-editorial direction is monospace-free by design (mono reads "technical").
+ */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');

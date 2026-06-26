@@ -1,0 +1,29 @@
+/* NEXMIND AI — Radii, effects, motion (Cool-Editorial direction)
+ * Sharp is the new brand constant: a near-square 2px radius on buttons, inputs,
+ * cards and blocks. Depth comes from HAIRLINES and WHITESPACE — not shadow, not
+ * glow, not gradient. A single faint elevation shadow exists for optional lift.
+ */
+:root {
+  /* ---- Corner radii (sharp/editorial) ---- */
+  --radius-sm: 2px;
+  --radius: 2px;          /* THE brand radius — buttons, inputs, cards, blocks */
+  --radius-md: 4px;       /* large inverted blocks / intake panel */
+  --radius-pill: 999px;   /* reserved (rarely used in this direction) */
+
+  /* ---- Elevation (used sparingly; structure prefers borders) ---- */
+  --shadow-card: 0 1px 0 rgba(26, 35, 48, 0.04);
+  --shadow-pop: 0 24px 60px -36px rgba(26, 35, 48, 0.28);
+
+  /* ---- Backdrop blur (sticky nav only) ---- */
+  --blur-nav: 12px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast: 140ms; /* @kind other */
+  --dur: 200ms; /* @kind other */
+  --dur-slow: 360ms; /* @kind other */
+  /* Interaction feel: hover lifts muted text → ink and brightens hairline → ink;
+     cards get a faint card fill on hover; rows nudge 8px right. No scale, no
+     bounce, no glow. Quiet and precise. */
+}
