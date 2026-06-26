@@ -79,6 +79,7 @@ export const zh = {
     sub: '这里是我在日常开发、技术研究与业余时间中沉淀的开源项目与实验工具。所有项目均发布于 GitHub，欢迎 Star 或贡献代码',
     all: '全部',
     viewRepo: '查看仓库',
+    liveDemo: '在线体验',
     projects: [
       '开源托管式智能体平台。将编程智能体转化为真正的团队成员——分配任务、跟踪进度、复利累积技能',
       'everything-claude-code 中文翻译与实战项目：完整的 Claude Code 配置集合（agents, skills, hooks, commands, rules, MCPs）。源自 Anthropic 黑客松获胜者的实战配置',
@@ -89,6 +90,7 @@ export const zh = {
       '基于 Model Context Protocol (MCP) 实现的招聘信息抓取服务，支持获取猎聘、Boss直聘、智联招聘、51job的职位信息',
       '开箱即用的 Garry Tan (Y Combinator 总裁) 精选 Claude Code 配置套件，集成 CEO、设计师、开发经理、发布经理等 23 项定制化角色与工具',
       'Claude Code 命令行工具核心机制与结构解析（基于还原后的 cli.js 代码），深度拆解 AI 辅助编程神器的内部实现原理',
+      '投标价格模拟器，纯前端单页工具，用于价格评分计算、低价审查阈值分析、手动改价对比和历史记录追踪',
     ],
   },
   footer: {

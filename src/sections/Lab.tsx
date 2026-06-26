@@ -11,6 +11,7 @@ interface Project {
   stars: number
   forks: number
   url: string
+  demoUrl?: string
 }
 
 const PROJECTS: Project[] = [
@@ -85,6 +86,15 @@ const PROJECTS: Project[] = [
     stars: 0,
     forks: 0,
     url: 'https://github.com/jerrybluex/claude_code_src'
+  },
+  {
+    name: 'bid-simulator',
+    category: 'Web & Desktop',
+    tags: ['TypeScript', 'Calculator', 'Single Page'],
+    stars: 0,
+    forks: 0,
+    url: 'https://github.com/jerrybluex/bid-simulator',
+    demoUrl: 'https://jerrybluex.github.io/bid-simulator/',
   }
 ]
 
@@ -290,23 +300,48 @@ function ProjectCard({ project, description }: { project: Project; description: 
           ))}
         </div>
 
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 6,
-            fontSize: 14,
-            fontWeight: 600,
-            color: hover ? 'var(--color-steel-bright)' : 'var(--color-steel)',
-            textDecoration: 'none',
-            transition: 'color var(--dur) var(--ease-out)',
-          }}
-        >
-          {t('lab.viewRepo')}
-        </a>
+        <div style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                fontSize: 14,
+                fontWeight: 600,
+                color: 'var(--color-slate-ink)',
+                textDecoration: 'none',
+                background: 'var(--color-paper)',
+                border: '1px solid var(--border-hair)',
+                borderRadius: 'var(--radius)',
+                padding: '6px 14px',
+                transition: 'all var(--dur) var(--ease-out)',
+              }}
+            >
+              {t('lab.liveDemo')}
+            </a>
+          )}
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              fontSize: 14,
+              fontWeight: 600,
+              color: hover ? 'var(--color-steel-bright)' : 'var(--color-steel)',
+              textDecoration: 'none',
+              transition: 'color var(--dur) var(--ease-out)',
+            }}
+          >
+            {t('lab.viewRepo')}
+          </a>
+        </div>
       </div>
     </article>
   )

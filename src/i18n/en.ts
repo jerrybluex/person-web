@@ -79,6 +79,7 @@ export const en = {
     sub: 'Open-source projects and experimental tools built during daily development, technical research, and spare time. All projects are published on GitHub — feel free to star or contribute.',
     all: 'All',
     viewRepo: 'View Repository',
+    liveDemo: 'Live Demo',
     projects: [
       'Open-source managed agent platform. Turn coding agents into real team members — assign tasks, track progress, and compound skills over time.',
       'Chinese translation and hands-on project for everything-claude-code: a complete Claude Code configuration collection (agents, skills, hooks, commands, rules, MCPs). Based on battle-tested configs from an Anthropic hackathon winner.',
@@ -89,6 +90,7 @@ export const en = {
       'A job listing scraper built on Model Context Protocol (MCP), supporting listings from Liepin, Boss Zhipin, Zhaopin, and 51job.',
       'A ready-to-use Claude Code configuration suite curated by Garry Tan (President of Y Combinator), integrating 23 customized roles and tools including CEO, designer, dev manager, and release manager.',
       'Core mechanism and architecture analysis of the Claude Code CLI tool (based on reverse-engineered cli.js source) — a deep dive into the internals of an AI coding powerhouse.',
+      'Bid price simulator — a pure frontend single-page tool for price scoring, low-price review threshold analysis, manual price adjustment comparison, and history tracking.',
     ],
   },
   footer: {
