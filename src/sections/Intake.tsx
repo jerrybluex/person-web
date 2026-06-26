@@ -13,9 +13,9 @@ export function Intake() {
         <div style={{ display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 64, background: 'var(--color-white)', border: '1px solid var(--border-hair)', borderRadius: 'var(--radius-md)', padding: 60 }}>
           <div>
             <Eyebrow>Project Intake</Eyebrow>
-            <h2 style={{ font: 'var(--type-h2)', letterSpacing: 'var(--tracking-display)', margin: '16px 0 16px' }}>告诉我们，智能<br />应该出现在哪里。</h2>
+            <h2 style={{ font: 'var(--type-h2)', letterSpacing: 'var(--tracking-display)', margin: '16px 0 16px' }}>告诉我们，智能<br />应该出现在哪里</h2>
             <p style={{ color: 'var(--color-muted)', fontSize: 15, lineHeight: 'var(--leading-body)', margin: 0 }}>
-              留下你的业务问题。首版表单仅做本地校验，正式上线时可接入邮件、飞书、企业微信或 CRM。
+              留下你的业务问题。首版表单仅做本地校验，正式上线时可接入邮件、飞书、企业微信或 CRM
             </p>
           </div>
           <form
@@ -29,11 +29,11 @@ export function Intake() {
             <Field label="项目描述" as="textarea" rows={4} wide placeholder="简单描述业务目标、现有系统或希望解决的问题" />
             {sent && (
               <p style={{ gridColumn: '1 / -1', margin: 0, fontSize: 13, color: 'var(--color-steel)' }}>
-                已收到咨询信息。正式接入后即可发送给团队。
+                已收到咨询信息。正式接入后即可发送给团队
               </p>
             )}
             <Button as="button" type="submit" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: 15 }}>
-              {sent ? '已提交 ✓' : '提交咨询'}
+              {sent ? '已提交' : '提交咨询'}
             </Button>
           </form>
         </div>

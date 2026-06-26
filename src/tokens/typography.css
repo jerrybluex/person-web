@@ -1,52 +1,50 @@
-/* NEXMIND AI — Typography tokens (Cool-Editorial direction)
- * Editorial, not technical. Large headlines at MEDIUM weight (500) with a tight
- * -0.035em track; airy 1.74 body leading; eyebrows are letter-spaced (0.22em)
- * small caps in steel. No mono, no heavy black display.
+/* swarq typography tokens
+ * Quiet, modern Chinese-first typography with crisp Latin UI support.
  */
 :root {
-  /* ---- Families (Latin first, CJK fallback — covers mixed 中文 + Latin) ---- */
-  --font-sans: 'Hanken Grotesk', 'Noto Sans SC', 'Aptos', 'Microsoft YaHei UI', system-ui, sans-serif;
-  --font-display: var(--font-sans);
+  /* ---- Families ---- */
+  --font-sans: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei UI', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-display: 'Noto Sans SC', 'Inter', 'PingFang SC', 'Microsoft YaHei UI', system-ui, sans-serif;
 
   /* ---- Weights ---- */
   --weight-light: 300;
   --weight-regular: 400;
-  --weight-medium: 500;     /* signature headline weight */
-  --weight-semibold: 600;   /* UI emphasis, buttons, labels */
+  --weight-medium: 500;
+  --weight-semibold: 600;
   --weight-bold: 700;
-  --weight-display: 500;    /* alias: headlines */
+  --weight-display: 600;
 
-  /* ---- Display / heading scale (editorial, fluid) ---- */
-  --text-hero: clamp(48px, 6vw, 68px);   /* h1  lh 1.04  ls -0.035em  weight 500 */
-  --text-h2: clamp(32px, 4vw, 42px);     /* lh 1.12 */
-  --text-h3: 24px;                       /* card titles, weight 600 */
+  /* ---- Display / heading scale ---- */
+  --text-hero: clamp(48px, 6vw, 68px);
+  --text-h2: clamp(32px, 4vw, 42px);
+  --text-h3: 24px;
   --text-h4: 19px;
 
   /* ---- Body / UI scale ---- */
-  --text-lead: 18px;     /* hero + section intros, lh 1.74 */
-  --text-body: 16px;     /* default body */
-  --text-sm: 15px;       /* card body */
-  --text-label: 14px;    /* nav */
-  --text-xs: 13px;       /* form labels, captions */
-  --text-eyebrow: 12px;  /* eyebrow / kicker */
+  --text-lead: 18px;
+  --text-body: 16px;
+  --text-sm: 15px;
+  --text-label: 14px;
+  --text-xs: 13px;
+  --text-eyebrow: 12px;
 
   /* ---- Line heights ---- */
-  --leading-display: 1.04;
-  --leading-tight: 1.12;
-  --leading-snug: 1.2;
+  --leading-display: 1.08;
+  --leading-tight: 1.14;
+  --leading-snug: 1.22;
   --leading-normal: 1.5;
-  --leading-body: 1.74;
+  --leading-body: 1.68;
 
   /* ---- Letter spacing ---- */
-  --tracking-display: -0.035em;  /* headlines pull tight */
-  --tracking-tight: -0.02em;     /* card titles */
+  --tracking-display: -0.012em;
+  --tracking-tight: -0.01em;
   --tracking-normal: 0;
-  --tracking-wide: 0.04em;       /* brand wordmark, nav */
-  --tracking-eyebrow: 0.22em;    /* uppercase eyebrows / kickers */
+  --tracking-wide: 0.04em;
+  --tracking-eyebrow: 0.18em;
 
   /* ---- Composed semantic roles ---- */
-  --type-hero: var(--weight-medium) var(--text-hero)/var(--leading-display) var(--font-display);
-  --type-h2: var(--weight-medium) var(--text-h2)/var(--leading-tight) var(--font-display);
+  --type-hero: var(--weight-display) var(--text-hero)/var(--leading-display) var(--font-display);
+  --type-h2: var(--weight-semibold) var(--text-h2)/var(--leading-tight) var(--font-display);
   --type-h3: var(--weight-semibold) var(--text-h3)/var(--leading-snug) var(--font-display);
   --type-body: var(--weight-regular) var(--text-body)/var(--leading-body) var(--font-sans);
 }

@@ -30,3 +30,14 @@ body {
 a {
   color: inherit;
 }
+
+@media (max-width: 860px) {
+  .site-nav-inner {
+    justify-content: flex-start !important;
+  }
+
+  .site-nav-links,
+  .site-nav-action {
+    display: none !important;
+  }
+}

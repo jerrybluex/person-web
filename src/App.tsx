@@ -1,16 +1,56 @@
+import { useState, useEffect } from 'react'
 import { Nav, Hero, Services, SystemLayers, Delivery, SiteFooter } from './sections/Sections'
 import { Intake } from './sections/Intake'
+import { Lab } from './sections/Lab'
 
 export default function App() {
+  const [currentHash, setCurrentHash] = useState(window.location.hash)
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash)
+    }
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
+  const isLab = currentHash === '#lab'
+
+  // Scroll to anchor on the homepage after it mounts (especially when returning from Lab page)
+  useEffect(() => {
+    if (!isLab) {
+      const targetId = currentHash ? currentHash.replace('#', '') : 'top'
+      
+      const timer = setTimeout(() => {
+        if (targetId === 'top') {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        } else {
+          const element = document.getElementById(targetId)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }
+      }, 60) // Let the DOM update and render sections first
+      return () => clearTimeout(timer)
+    }
+  }, [isLab, currentHash])
+
   return (
     <>
-      <Nav />
-      <Hero />
-      <Services />
-      <SystemLayers />
-      <Delivery />
-      <Intake />
+      <Nav currentHash={currentHash} />
+      {isLab ? (
+        <Lab />
+      ) : (
+        <>
+          <Hero />
+          <Services />
+          <SystemLayers />
+          <Delivery />
+          <Intake />
+        </>
+      )}
       <SiteFooter />
     </>
   )
 }
+

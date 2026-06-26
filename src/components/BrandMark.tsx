@@ -1,15 +1,18 @@
 import type { CSSProperties } from 'react'
 
-export function BrandMark({ name = 'NEXMIND', size = 13, color = 'var(--color-slate-ink)', style }: {
+export function BrandMark({ name = 'swarq', size = 44, style }: {
   name?: string
   size?: number
-  color?: string
   style?: CSSProperties
 }) {
   return (
-    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '11px', fontWeight: 600, letterSpacing: 'var(--tracking-wide)', color, ...style }}>
-      <span style={{ width: size, height: size, background: color, borderRadius: '3px' }} />
-      {name}
+    <span style={{ display: 'inline-flex', alignItems: 'center', minWidth: size * 3.95, ...style }} aria-label={name}>
+      <img
+        src="/logo-swarq.png"
+        alt=""
+        aria-hidden="true"
+        style={{ display: 'block', height: size, width: 'auto', filter: 'contrast(1.14) saturate(1.08)' }}
+      />
     </span>
   )
 }
