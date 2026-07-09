@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Nav, Hero, Services, SystemLayers, Delivery, SiteFooter } from './sections/Sections'
 import { Intake } from './sections/Intake'
 import { Lab } from './sections/Lab'
+import { Tools } from './sections/Tools'
 
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash)
@@ -15,10 +16,12 @@ export default function App() {
   }, [])
 
   const isLab = currentHash === '#lab'
+  const isTools = currentHash === '#tools'
+  const isCustomPage = isLab || isTools
 
-  // Scroll to anchor on the homepage after it mounts (especially when returning from Lab page)
+  // Scroll to anchor on the homepage after it mounts (especially when returning from other pages)
   useEffect(() => {
-    if (!isLab) {
+    if (!isCustomPage) {
       const targetId = currentHash ? currentHash.replace('#', '') : 'top'
       
       const timer = setTimeout(() => {
@@ -33,12 +36,14 @@ export default function App() {
       }, 60) // Let the DOM update and render sections first
       return () => clearTimeout(timer)
     }
-  }, [isLab, currentHash])
+  }, [isCustomPage, currentHash])
 
   return (
     <>
       <Nav currentHash={currentHash} />
-      {isLab ? (
+      {isTools ? (
+        <Tools />
+      ) : isLab ? (
         <Lab />
       ) : (
         <>

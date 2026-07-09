@@ -4,6 +4,7 @@ export const en = {
     system: 'System',
     delivery: 'Delivery',
     lab: 'Lab',
+    tools: 'Tools',
     cta: 'Book a Consultation',
   },
   hero: {
@@ -92,6 +93,26 @@ export const en = {
       'Core mechanism and architecture analysis of the Claude Code CLI tool (based on reverse-engineered cli.js source) — a deep dive into the internals of an AI coding powerhouse.',
       'Bid price simulator — a pure frontend single-page tool for price scoring, low-price review threshold analysis, manual price adjustment comparison, and history tracking.',
     ],
+  },
+  tools: {
+    eyebrow: 'Web-Based Productivity Tools',
+    title: 'Online Tools',
+    sub: 'Providing you with secure and efficient client-side utilities. All processing is completed locally in your browser, and files are never uploaded to any server, fully protecting your privacy.',
+    backToHome: 'Back to Home',
+    ofd: {
+      name: 'OFD Previewer & PDF Converter',
+      desc: 'Preview national standard OFD files directly in your browser and export them as high-quality PDFs with selectable text.',
+      dragTip: 'Drag & drop an OFD file here, or click to select',
+      processing: 'Parsing OFD file, please wait...',
+      error: 'Failed to parse OFD file. Please check if the file is corrupted.',
+      exportPdf: 'Export to PDF',
+      printTip: 'Tip: After clicking "Save as PDF", choose "Save as PDF" as the Destination in the system print dialog.',
+      pages: '{count} pages in total',
+      privacyTip: '🔒 Local Privacy Protection: Parsing and rendering are performed entirely in your browser. No files are uploaded, keeping your data 100% secure.',
+      noFile: 'Please upload an OFD file first.',
+      exportBtn: 'Save as PDF',
+      closeBtn: 'Close Preview'
+    }
   },
   footer: {
     tagline: 'Intelligent Hardware / Agent Systems / Custom LLMs',

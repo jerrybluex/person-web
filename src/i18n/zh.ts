@@ -4,6 +4,7 @@ export const zh = {
     system: '系统',
     delivery: '交付',
     lab: '实验室',
+    tools: '在线工具',
     cta: '预约方案诊断',
   },
   hero: {
@@ -92,6 +93,26 @@ export const zh = {
       'Claude Code 命令行工具核心机制与结构解析（基于还原后的 cli.js 代码），深度拆解 AI 辅助编程神器的内部实现原理',
       '投标价格模拟器，纯前端单页工具，用于价格评分计算、低价审查阈值分析、手动改价对比和历史记录追踪',
     ],
+  },
+  tools: {
+    eyebrow: 'Web-Based Productivity Tools',
+    title: '在线工具箱 / Tools',
+    sub: '为您提供安全、高效的纯前端实用工具。所有处理均在浏览器本地完成，文件不会上传至服务器，完全保障您的隐私安全。',
+    backToHome: '返回首页',
+    ofd: {
+      name: 'OFD 在线预览与 PDF 转换',
+      desc: '支持在浏览器中直接预览国家标准 OFD 格式文件，并可将其导出为高质量、文本可选中的 PDF 文件。',
+      dragTip: '将 OFD 文件拖拽到此处，或点击选择文件',
+      processing: '正在解析 OFD 文件中，请稍候...',
+      error: '解析 OFD 文件失败，请检查文件是否损坏',
+      exportPdf: '导出 PDF 文件',
+      printTip: '提示：点击下方“另存为 PDF”按钮后，请在弹出的系统打印窗口中将“目标打印机”设置为“另存为 PDF”或“Save as PDF”。',
+      pages: '共 {count} 页',
+      privacyTip: '🔒 本地隐私保护：文件解析和渲染完全在您的浏览器中进行，不会消耗流量上传，数据 100% 安全。',
+      noFile: '请先上传 OFD 文件',
+      exportBtn: '另存为 PDF',
+      closeBtn: '关闭预览'
+    }
   },
   footer: {
     tagline: 'Intelligent Hardware / Agent Systems / Custom LLMs',

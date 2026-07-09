@@ -1,0 +1,122 @@
+export const en = {
+  nav: {
+    services: "Services",
+    system: "System",
+    delivery: "Delivery",
+    lab: "Lab",
+    tools: "Tools",
+    cta: "Book a Consultation"
+  },
+  hero: {
+    eyebrow: "Enterprise AI Engineering",
+    title1: "Build Your Own",
+    title2: "AI Brain",
+    lead: "Delivering intelligent hardware, business agents, and custom LLMs — converging scattered data, devices, and workflows into deployable, operable, and continuously evolving AI systems.",
+    ctaPrimary: "Book a Consultation",
+    ctaSecondary: "Explore Services",
+    stats: [
+      ["2–4 Weeks", "Prototype Validation"],
+      ["Edge + Cloud", "Device + Private Deploy"],
+      ["Observable", "Authorizable · Operable"],
+      ["3 Business Lines", "Hardware / Agents / Models"]
+    ]
+  },
+  services: {
+    eyebrow: "What We Build",
+    title: "Three business lines forming the core neural network for enterprise AI deployment.",
+    items: [
+      ["01", "Edge Hardware", "Intelligent Hardware Development", "Integrated sensors, edge inference, device cloud, and industrial design — bringing AI capabilities to real endpoints."],
+      ["02", "Agent System", "Agent Development & Deployment", "Building observable, authorizable agents for sales, operations, support, and R&D workflows that integrate with enterprise systems."],
+      ["03", "Custom Model", "Custom LLM Solutions", "Fine-tuning, evaluation, compression, and long-term operations — built around industry corpora, private deployment, and task metrics."]
+    ]
+  },
+  system: {
+    eyebrow: "System Layers",
+    title1: "Not a showcase demo,",
+    title2: "but a production-grade AI system.",
+    sub: "Building a continuously evolving engineering framework around data, permissions, deployment, evaluation, and operations — ensuring model capabilities truly reach devices and business workflows.",
+    caps: [
+      ["01", "Multimodal Perception"],
+      ["02", "Edge Inference"],
+      ["03", "RAG Knowledge Engineering"],
+      ["04", "Agent Orchestration"],
+      ["05", "Model Fine-tuning"],
+      ["06", "Private Deployment"]
+    ]
+  },
+  delivery: {
+    eyebrow: "Delivery Path",
+    title1: "A clear delivery cadence",
+    title2: "to reduce AI project uncertainty.",
+    steps: [
+      ["01", "Diagnose the Scenario", "Start with the business problem — identify where intelligence should live."],
+      ["02", "Validate the Prototype", "Build a working prototype pipeline in 2–4 weeks."],
+      ["03", "Integrate Enterprise Systems", "Connect to permissions, data, and existing business systems."],
+      ["04", "Enter Production Iteration", "Establish evaluation and operations for continuous evolution."]
+    ]
+  },
+  intake: {
+    eyebrow: "Project Intake",
+    title1: "Tell us where intelligence",
+    title2: "should be deployed.",
+    sub: "Share your business challenge. The current form handles local validation only — email, Slack, Teams, or CRM integration is ready for production.",
+    name: "Name",
+    namePlaceholder: "e.g. John",
+    company: "Company",
+    companyPlaceholder: "e.g. Acme Manufacturing Ltd.",
+    contact: "Contact",
+    contactPlaceholder: "Phone number or email",
+    type: "Inquiry Type",
+    typeOptions: ["General Inquiry", "Intelligent Hardware", "AI Agents", "Custom LLM"],
+    description: "Project Description",
+    descPlaceholder: "Briefly describe your business goals, existing systems, or the problem you want to solve",
+    success: "Inquiry received. Once integrated, it will be forwarded to the team.",
+    submitted: "Submitted",
+    submit: "Submit Inquiry"
+  },
+  lab: {
+    eyebrow: "Open Source & Personal Sandbox",
+    title: "Lab",
+    sub: "Open-source projects and experimental tools built during daily development, technical research, and spare time. All projects are published on GitHub — feel free to star or contribute.",
+    all: "All",
+    viewRepo: "View Repository",
+    liveDemo: "Live Demo",
+    projects: [
+      "Open-source managed agent platform. Turn coding agents into real team members — assign tasks, track progress, and compound skills over time.",
+      "Chinese translation and hands-on project for everything-claude-code: a complete Claude Code configuration collection (agents, skills, hooks, commands, rules, MCPs). Based on battle-tested configs from an Anthropic hackathon winner.",
+      "From zero to enterprise: a dual-language deep-dive tutorial on Claude Code + OpenClaw, covering best practices for AI-assisted programming.",
+      "Chinese multi-agent LLM framework for financial trading and quantitative investment — an enhanced Chinese edition of TradingAgents.",
+      "A smart CLI download monitor with a polished web dashboard, supporting real-time speed tracking and task management.",
+      "An Electron-based LAN file transfer desktop app for Windows and macOS — beautiful UI, blazing-fast transfers.",
+      "A job listing scraper built on Model Context Protocol (MCP), supporting listings from Liepin, Boss Zhipin, Zhaopin, and 51job.",
+      "A ready-to-use Claude Code configuration suite curated by Garry Tan (President of Y Combinator), integrating 23 customized roles and tools including CEO, designer, dev manager, and release manager.",
+      "Core mechanism and architecture analysis of the Claude Code CLI tool (based on reverse-engineered cli.js source) — a deep dive into the internals of an AI coding powerhouse.",
+      "Bid price simulator — a pure frontend single-page tool for price scoring, low-price review threshold analysis, manual price adjustment comparison, and history tracking."
+    ]
+  },
+  tools: {
+    eyebrow: "Web-Based Productivity Tools",
+    title: "Online Tools",
+    sub: "Providing you with secure and efficient client-side utilities. All processing is completed locally in your browser, and files are never uploaded to any server, fully protecting your privacy.",
+    backToHome: "Back to Home",
+    ofd: {
+      name: "OFD Previewer & PDF Converter",
+      desc: "Preview national standard OFD files directly in your browser and export them as high-quality PDFs with selectable text.",
+      dragTip: "Drag & drop an OFD file here, or click to select",
+      processing: "Parsing OFD file, please wait...",
+      error: "Failed to parse OFD file. Please check if the file is corrupted.",
+      exportPdf: "Export to PDF",
+      printTip: 'Tip: After clicking "Save as PDF", choose "Save as PDF" as the Destination in the system print dialog.',
+      pages: "{count} pages in total",
+      privacyTip: "🔒 Local Privacy Protection: Parsing and rendering are performed entirely in your browser. No files are uploaded, keeping your data 100% secure.",
+      noFile: "Please upload an OFD file first.",
+      exportBtn: "Save as PDF",
+      closeBtn: "Close Preview"
+    }
+  },
+  footer: {
+    tagline: "Intelligent Hardware / Agent Systems / Custom LLMs"
+  }
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVuLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBlbiA9IHtcbiAgbmF2OiB7XG4gICAgc2VydmljZXM6ICdTZXJ2aWNlcycsXG4gICAgc3lzdGVtOiAnU3lzdGVtJyxcbiAgICBkZWxpdmVyeTogJ0RlbGl2ZXJ5JyxcbiAgICBsYWI6ICdMYWInLFxuICAgIHRvb2xzOiAnVG9vbHMnLFxuICAgIGN0YTogJ0Jvb2sgYSBDb25zdWx0YXRpb24nLFxuICB9LFxuICBoZXJvOiB7XG4gICAgZXllYnJvdzogJ0VudGVycHJpc2UgQUkgRW5naW5lZXJpbmcnLFxuICAgIHRpdGxlMTogJ0J1aWxkIFlvdXIgT3duJyxcbiAgICB0aXRsZTI6ICdBSSBCcmFpbicsXG4gICAgbGVhZDogJ0RlbGl2ZXJpbmcgaW50ZWxsaWdlbnQgaGFyZHdhcmUsIGJ1c2luZXNzIGFnZW50cywgYW5kIGN1c3RvbSBMTE1zIOKAlCBjb252ZXJnaW5nIHNjYXR0ZXJlZCBkYXRhLCBkZXZpY2VzLCBhbmQgd29ya2Zsb3dzIGludG8gZGVwbG95YWJsZSwgb3BlcmFibGUsIGFuZCBjb250aW51b3VzbHkgZXZvbHZpbmcgQUkgc3lzdGVtcy4nLFxuICAgIGN0YVByaW1hcnk6ICdCb29rIGEgQ29uc3VsdGF0aW9uJyxcbiAgICBjdGFTZWNvbmRhcnk6ICdFeHBsb3JlIFNlcnZpY2VzJyxcbiAgICBzdGF0czogW1xuICAgICAgWycy4oCTNCBXZWVrcycsICdQcm90b3R5cGUgVmFsaWRhdGlvbiddLFxuICAgICAgWydFZGdlICsgQ2xvdWQnLCAnRGV2aWNlICsgUHJpdmF0ZSBEZXBsb3knXSxcbiAgICAgIFsnT2JzZXJ2YWJsZScsICdBdXRob3JpemFibGUgwrcgT3BlcmFibGUnXSxcbiAgICAgIFsnMyBCdXNpbmVzcyBMaW5lcycsICdIYXJkd2FyZSAvIEFnZW50cyAvIE1vZGVscyddLFxuICAgIF0sXG4gIH0sXG4gIHNlcnZpY2VzOiB7XG4gICAgZXllYnJvdzogJ1doYXQgV2UgQnVpbGQnLFxuICAgIHRpdGxlOiAnVGhyZWUgYnVzaW5lc3MgbGluZXMgZm9ybWluZyB0aGUgY29yZSBuZXVyYWwgbmV0d29yayBmb3IgZW50ZXJwcmlzZSBBSSBkZXBsb3ltZW50LicsXG4gICAgaXRlbXM6IFtcbiAgICAgIFsnMDEnLCAnRWRnZSBIYXJkd2FyZScsICdJbnRlbGxpZ2VudCBIYXJkd2FyZSBEZXZlbG9wbWVudCcsICdJbnRlZ3JhdGVkIHNlbnNvcnMsIGVkZ2UgaW5mZXJlbmNlLCBkZXZpY2UgY2xvdWQsIGFuZCBpbmR1c3RyaWFsIGRlc2lnbiDigJQgYnJpbmdpbmcgQUkgY2FwYWJpbGl0aWVzIHRvIHJlYWwgZW5kcG9pbnRzLiddLFxuICAgICAgWycwMicsICdBZ2VudCBTeXN0ZW0nLCAnQWdlbnQgRGV2ZWxvcG1lbnQgJiBEZXBsb3ltZW50JywgJ0J1aWxkaW5nIG9ic2VydmFibGUsIGF1dGhvcml6YWJsZSBhZ2VudHMgZm9yIHNhbGVzLCBvcGVyYXRpb25zLCBzdXBwb3J0LCBhbmQgUiZEIHdvcmtmbG93cyB0aGF0IGludGVncmF0ZSB3aXRoIGVudGVycHJpc2Ugc3lzdGVtcy4nXSxcbiAgICAgIFsnMDMnLCAnQ3VzdG9tIE1vZGVsJywgJ0N1c3RvbSBMTE0gU29sdXRpb25zJywgJ0ZpbmUtdHVuaW5nLCBldmFsdWF0aW9uLCBjb21wcmVzc2lvbiwgYW5kIGxvbmctdGVybSBvcGVyYXRpb25zIOKAlCBidWlsdCBhcm91bmQgaW5kdXN0cnkgY29ycG9yYSwgcHJpdmF0ZSBkZXBsb3ltZW50LCBhbmQgdGFzayBtZXRyaWNzLiddLFxuICAgIF0sXG4gIH0sXG4gIHN5c3RlbToge1xuICAgIGV5ZWJyb3c6ICdTeXN0ZW0gTGF5ZXJzJyxcbiAgICB0aXRsZTE6ICdOb3QgYSBzaG93Y2FzZSBkZW1vLCcsXG4gICAgdGl0bGUyOiAnYnV0IGEgcHJvZHVjdGlvbi1ncmFkZSBBSSBzeXN0ZW0uJyxcbiAgICBzdWI6ICdCdWlsZGluZyBhIGNvbnRpbnVvdXNseSBldm9sdmluZyBlbmdpbmVlcmluZyBmcmFtZXdvcmsgYXJvdW5kIGRhdGEsIHBlcm1pc3Npb25zLCBkZXBsb3ltZW50LCBldmFsdWF0aW9uLCBhbmQgb3BlcmF0aW9ucyDigJQgZW5zdXJpbmcgbW9kZWwgY2FwYWJpbGl0aWVzIHRydWx5IHJlYWNoIGRldmljZXMgYW5kIGJ1c2luZXNzIHdvcmtmbG93cy4nLFxuICAgIGNhcHM6IFtcbiAgICAgIFsnMDEnLCAnTXVsdGltb2RhbCBQZXJjZXB0aW9uJ10sXG4gICAgICBbJzAyJywgJ0VkZ2UgSW5mZXJlbmNlJ10sXG4gICAgICBbJzAzJywgJ1JBRyBLbm93bGVkZ2UgRW5naW5lZXJpbmcnXSxcbiAgICAgIFsnMDQnLCAnQWdlbnQgT3JjaGVzdHJhdGlvbiddLFxuICAgICAgWycwNScsICdNb2RlbCBGaW5lLXR1bmluZyddLFxuICAgICAgWycwNicsICdQcml2YXRlIERlcGxveW1lbnQnXSxcbiAgICBdLFxuICB9LFxuICBkZWxpdmVyeToge1xuICAgIGV5ZWJyb3c6ICdEZWxpdmVyeSBQYXRoJyxcbiAgICB0aXRsZTE6ICdBIGNsZWFyIGRlbGl2ZXJ5IGNhZGVuY2UnLFxuICAgIHRpdGxlMjogJ3RvIHJlZHVjZSBBSSBwcm9qZWN0IHVuY2VydGFpbnR5LicsXG4gICAgc3RlcHM6IFtcbiAgICAgIFsnMDEnLCAnRGlhZ25vc2UgdGhlIFNjZW5hcmlvJywgJ1N0YXJ0IHdpdGggdGhlIGJ1c2luZXNzIHByb2JsZW0g4oCUIGlkZW50aWZ5IHdoZXJlIGludGVsbGlnZW5jZSBzaG91bGQgbGl2ZS4nXSxcbiAgICAgIFsnMDInLCAnVmFsaWRhdGUgdGhlIFByb3RvdHlwZScsICdCdWlsZCBhIHdvcmtpbmcgcHJvdG90eXBlIHBpcGVsaW5lIGluIDLigJM0IHdlZWtzLiddLFxuICAgICAgWycwMycsICdJbnRlZ3JhdGUgRW50ZXJwcmlzZSBTeXN0ZW1zJywgJ0Nvbm5lY3QgdG8gcGVybWlzc2lvbnMsIGRhdGEsIGFuZCBleGlzdGluZyBidXNpbmVzcyBzeXN0ZW1zLiddLFxuICAgICAgWycwNCcsICdFbnRlciBQcm9kdWN0aW9uIEl0ZXJhdGlvbicsICdFc3RhYmxpc2ggZXZhbHVhdGlvbiBhbmQgb3BlcmF0aW9ucyBmb3IgY29udGludW91cyBldm9sdXRpb24uJ10sXG4gICAgXSxcbiAgfSxcbiAgaW50YWtlOiB7XG4gICAgZXllYnJvdzogJ1Byb2plY3QgSW50YWtlJyxcbiAgICB0aXRsZTE6ICdUZWxsIHVzIHdoZXJlIGludGVsbGlnZW5jZScsXG4gICAgdGl0bGUyOiAnc2hvdWxkIGJlIGRlcGxveWVkLicsXG4gICAgc3ViOiAnU2hhcmUgeW91ciBidXNpbmVzcyBjaGFsbGVuZ2UuIFRoZSBjdXJyZW50IGZvcm0gaGFuZGxlcyBsb2NhbCB2YWxpZGF0aW9uIG9ubHkg4oCUIGVtYWlsLCBTbGFjaywgVGVhbXMsIG9yIENSTSBpbnRlZ3JhdGlvbiBpcyByZWFkeSBmb3IgcHJvZHVjdGlvbi4nLFxuICAgIG5hbWU6ICdOYW1lJyxcbiAgICBuYW1lUGxhY2Vob2xkZXI6ICdlLmcuIEpvaG4nLFxuICAgIGNvbXBhbnk6ICdDb21wYW55JyxcbiAgICBjb21wYW55UGxhY2Vob2xkZXI6ICdlLmcuIEFjbWUgTWFudWZhY3R1cmluZyBMdGQuJyxcbiAgICBjb250YWN0OiAnQ29udGFjdCcsXG4gICAgY29udGFjdFBsYWNlaG9sZGVyOiAnUGhvbmUgbnVtYmVyIG9yIGVtYWlsJyxcbiAgICB0eXBlOiAnSW5xdWlyeSBUeXBlJyxcbiAgICB0eXBlT3B0aW9uczogWydHZW5lcmFsIElucXVpcnknLCAnSW50ZWxsaWdlbnQgSGFyZHdhcmUnLCAnQUkgQWdlbnRzJywgJ0N1c3RvbSBMTE0nXSxcbiAgICBkZXNjcmlwdGlvbjogJ1Byb2plY3QgRGVzY3JpcHRpb24nLFxuICAgIGRlc2NQbGFjZWhvbGRlcjogJ0JyaWVmbHkgZGVzY3JpYmUgeW91ciBidXNpbmVzcyBnb2FscywgZXhpc3Rpbmcgc3lzdGVtcywgb3IgdGhlIHByb2JsZW0geW91IHdhbnQgdG8gc29sdmUnLFxuICAgIHN1Y2Nlc3M6ICdJbnF1aXJ5IHJlY2VpdmVkLiBPbmNlIGludGVncmF0ZWQsIGl0IHdpbGwgYmUgZm9yd2FyZGVkIHRvIHRoZSB0ZWFtLicsXG4gICAgc3VibWl0dGVkOiAnU3VibWl0dGVkJyxcbiAgICBzdWJtaXQ6ICdTdWJtaXQgSW5xdWlyeScsXG4gIH0sXG4gIGxhYjoge1xuICAgIGV5ZWJyb3c6ICdPcGVuIFNvdXJjZSAmIFBlcnNvbmFsIFNhbmRib3gnLFxuICAgIHRpdGxlOiAnTGFiJyxcbiAgICBzdWI6ICdPcGVuLXNvdXJjZSBwcm9qZWN0cyBhbmQgZXhwZXJpbWVudGFsIHRvb2xzIGJ1aWx0IGR1cmluZyBkYWlseSBkZXZlbG9wbWVudCwgdGVjaG5pY2FsIHJlc2VhcmNoLCBhbmQgc3BhcmUgdGltZS4gQWxsIHByb2plY3RzIGFyZSBwdWJsaXNoZWQgb24gR2l0SHViIOKAlCBmZWVsIGZyZWUgdG8gc3RhciBvciBjb250cmlidXRlLicsXG4gICAgYWxsOiAnQWxsJyxcbiAgICB2aWV3UmVwbzogJ1ZpZXcgUmVwb3NpdG9yeScsXG4gICAgbGl2ZURlbW86ICdMaXZlIERlbW8nLFxuICAgIHByb2plY3RzOiBbXG4gICAgICAnT3Blbi1zb3VyY2UgbWFuYWdlZCBhZ2VudCBwbGF0Zm9ybS4gVHVybiBjb2RpbmcgYWdlbnRzIGludG8gcmVhbCB0ZWFtIG1lbWJlcnMg4oCUIGFzc2lnbiB0YXNrcywgdHJhY2sgcHJvZ3Jlc3MsIGFuZCBjb21wb3VuZCBza2lsbHMgb3ZlciB0aW1lLicsXG4gICAgICAnQ2hpbmVzZSB0cmFuc2xhdGlvbiBhbmQgaGFuZHMtb24gcHJvamVjdCBmb3IgZXZlcnl0aGluZy1jbGF1ZGUtY29kZTogYSBjb21wbGV0ZSBDbGF1ZGUgQ29kZSBjb25maWd1cmF0aW9uIGNvbGxlY3Rpb24gKGFnZW50cywgc2tpbGxzLCBob29rcywgY29tbWFuZHMsIHJ1bGVzLCBNQ1BzKS4gQmFzZWQgb24gYmF0dGxlLXRlc3RlZCBjb25maWdzIGZyb20gYW4gQW50aHJvcGljIGhhY2thdGhvbiB3aW5uZXIuJyxcbiAgICAgICdGcm9tIHplcm8gdG8gZW50ZXJwcmlzZTogYSBkdWFsLWxhbmd1YWdlIGRlZXAtZGl2ZSB0dXRvcmlhbCBvbiBDbGF1ZGUgQ29kZSArIE9wZW5DbGF3LCBjb3ZlcmluZyBiZXN0IHByYWN0aWNlcyBmb3IgQUktYXNzaXN0ZWQgcHJvZ3JhbW1pbmcuJyxcbiAgICAgICdDaGluZXNlIG11bHRpLWFnZW50IExMTSBmcmFtZXdvcmsgZm9yIGZpbmFuY2lhbCB0cmFkaW5nIGFuZCBxdWFudGl0YXRpdmUgaW52ZXN0bWVudCDigJQgYW4gZW5oYW5jZWQgQ2hpbmVzZSBlZGl0aW9uIG9mIFRyYWRpbmdBZ2VudHMuJyxcbiAgICAgICdBIHNtYXJ0IENMSSBkb3dubG9hZCBtb25pdG9yIHdpdGggYSBwb2xpc2hlZCB3ZWIgZGFzaGJvYXJkLCBzdXBwb3J0aW5nIHJlYWwtdGltZSBzcGVlZCB0cmFja2luZyBhbmQgdGFzayBtYW5hZ2VtZW50LicsXG4gICAgICAnQW4gRWxlY3Ryb24tYmFzZWQgTEFOIGZpbGUgdHJhbnNmZXIgZGVza3RvcCBhcHAgZm9yIFdpbmRvd3MgYW5kIG1hY09TIOKAlCBiZWF1dGlmdWwgVUksIGJsYXppbmctZmFzdCB0cmFuc2ZlcnMuJyxcbiAgICAgICdBIGpvYiBsaXN0aW5nIHNjcmFwZXIgYnVpbHQgb24gTW9kZWwgQ29udGV4dCBQcm90b2NvbCAoTUNQKSwgc3VwcG9ydGluZyBsaXN0aW5ncyBmcm9tIExpZXBpbiwgQm9zcyBaaGlwaW4sIFpoYW9waW4sIGFuZCA1MWpvYi4nLFxuICAgICAgJ0EgcmVhZHktdG8tdXNlIENsYXVkZSBDb2RlIGNvbmZpZ3VyYXRpb24gc3VpdGUgY3VyYXRlZCBieSBHYXJyeSBUYW4gKFByZXNpZGVudCBvZiBZIENvbWJpbmF0b3IpLCBpbnRlZ3JhdGluZyAyMyBjdXN0b21pemVkIHJvbGVzIGFuZCB0b29scyBpbmNsdWRpbmcgQ0VPLCBkZXNpZ25lciwgZGV2IG1hbmFnZXIsIGFuZCByZWxlYXNlIG1hbmFnZXIuJyxcbiAgICAgICdDb3JlIG1lY2hhbmlzbSBhbmQgYXJjaGl0ZWN0dXJlIGFuYWx5c2lzIG9mIHRoZSBDbGF1ZGUgQ29kZSBDTEkgdG9vbCAoYmFzZWQgb24gcmV2ZXJzZS1lbmdpbmVlcmVkIGNsaS5qcyBzb3VyY2UpIOKAlCBhIGRlZXAgZGl2ZSBpbnRvIHRoZSBpbnRlcm5hbHMgb2YgYW4gQUkgY29kaW5nIHBvd2VyaG91c2UuJyxcbiAgICAgICdCaWQgcHJpY2Ugc2ltdWxhdG9yIOKAlCBhIHB1cmUgZnJvbnRlbmQgc2luZ2xlLXBhZ2UgdG9vbCBmb3IgcHJpY2Ugc2NvcmluZywgbG93LXByaWNlIHJldmlldyB0aHJlc2hvbGQgYW5hbHlzaXMsIG1hbnVhbCBwcmljZSBhZGp1c3RtZW50IGNvbXBhcmlzb24sIGFuZCBoaXN0b3J5IHRyYWNraW5nLicsXG4gICAgXSxcbiAgfSxcbiAgdG9vbHM6IHtcbiAgICBleWVicm93OiAnV2ViLUJhc2VkIFByb2R1Y3Rpdml0eSBUb29scycsXG4gICAgdGl0bGU6ICdPbmxpbmUgVG9vbHMnLFxuICAgIHN1YjogJ1Byb3ZpZGluZyB5b3Ugd2l0aCBzZWN1cmUgYW5kIGVmZmljaWVudCBjbGllbnQtc2lkZSB1dGlsaXRpZXMuIEFsbCBwcm9jZXNzaW5nIGlzIGNvbXBsZXRlZCBsb2NhbGx5IGluIHlvdXIgYnJvd3NlciwgYW5kIGZpbGVzIGFyZSBuZXZlciB1cGxvYWRlZCB0byBhbnkgc2VydmVyLCBmdWxseSBwcm90ZWN0aW5nIHlvdXIgcHJpdmFjeS4nLFxuICAgIGJhY2tUb0hvbWU6ICdCYWNrIHRvIEhvbWUnLFxuICAgIG9mZDoge1xuICAgICAgbmFtZTogJ09GRCBQcmV2aWV3ZXIgJiBQREYgQ29udmVydGVyJyxcbiAgICAgIGRlc2M6ICdQcmV2aWV3IG5hdGlvbmFsIHN0YW5kYXJkIE9GRCBmaWxlcyBkaXJlY3RseSBpbiB5b3VyIGJyb3dzZXIgYW5kIGV4cG9ydCB0aGVtIGFzIGhpZ2gtcXVhbGl0eSBQREZzIHdpdGggc2VsZWN0YWJsZSB0ZXh0LicsXG4gICAgICBkcmFnVGlwOiAnRHJhZyAmIGRyb3AgYW4gT0ZEIGZpbGUgaGVyZSwgb3IgY2xpY2sgdG8gc2VsZWN0JyxcbiAgICAgIHByb2Nlc3Npbmc6ICdQYXJzaW5nIE9GRCBmaWxlLCBwbGVhc2Ugd2FpdC4uLicsXG4gICAgICBlcnJvcjogJ0ZhaWxlZCB0byBwYXJzZSBPRkQgZmlsZS4gUGxlYXNlIGNoZWNrIGlmIHRoZSBmaWxlIGlzIGNvcnJ1cHRlZC4nLFxuICAgICAgZXhwb3J0UGRmOiAnRXhwb3J0IHRvIFBERicsXG4gICAgICBwcmludFRpcDogJ1RpcDogQWZ0ZXIgY2xpY2tpbmcgXCJTYXZlIGFzIFBERlwiLCBjaG9vc2UgXCJTYXZlIGFzIFBERlwiIGFzIHRoZSBEZXN0aW5hdGlvbiBpbiB0aGUgc3lzdGVtIHByaW50IGRpYWxvZy4nLFxuICAgICAgcGFnZXM6ICd7Y291bnR9IHBhZ2VzIGluIHRvdGFsJyxcbiAgICAgIHByaXZhY3lUaXA6ICfwn5SSIExvY2FsIFByaXZhY3kgUHJvdGVjdGlvbjogUGFyc2luZyBhbmQgcmVuZGVyaW5nIGFyZSBwZXJmb3JtZWQgZW50aXJlbHkgaW4geW91ciBicm93c2VyLiBObyBmaWxlcyBhcmUgdXBsb2FkZWQsIGtlZXBpbmcgeW91ciBkYXRhIDEwMCUgc2VjdXJlLicsXG4gICAgICBub0ZpbGU6ICdQbGVhc2UgdXBsb2FkIGFuIE9GRCBmaWxlIGZpcnN0LicsXG4gICAgICBleHBvcnRCdG46ICdTYXZlIGFzIFBERicsXG4gICAgICBjbG9zZUJ0bjogJ0Nsb3NlIFByZXZpZXcnXG4gICAgfVxuICB9LFxuICBmb290ZXI6IHtcbiAgICB0YWdsaW5lOiAnSW50ZWxsaWdlbnQgSGFyZHdhcmUgLyBBZ2VudCBTeXN0ZW1zIC8gQ3VzdG9tIExMTXMnLFxuICB9LFxufVxuIl0sIm1hcHBpbmdzIjoiQUFBTyxhQUFNLEtBQUs7QUFBQSxFQUNoQixLQUFLO0FBQUEsSUFDSCxVQUFVO0FBQUEsSUFDVixRQUFRO0FBQUEsSUFDUixVQUFVO0FBQUEsSUFDVixLQUFLO0FBQUEsSUFDTCxP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

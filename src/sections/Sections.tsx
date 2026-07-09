@@ -9,6 +9,7 @@ import { StepCard } from '../components/StepCard'
 import { BrandMark } from '../components/BrandMark'
 import { useLang } from '../i18n/LangContext'
 import { zh } from '../i18n/zh'
+import { GridCanvas } from '../components/GridCanvas'
 
 const wrap: React.CSSProperties = { maxWidth: 1120, margin: '0 auto', padding: '0 40px' }
 
@@ -47,6 +48,7 @@ export function Nav({ currentHash = '' }: { currentHash?: string }) {
     [t('nav.system'), '#system'],
     [t('nav.delivery'), '#delivery'],
     [t('nav.lab'), '#lab'],
+    [t('nav.tools'), '#tools'],
   ]
   return (
     <nav style={{ position: 'sticky', top: 0, zIndex: 20, background: 'rgba(238,240,242,.86)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-hair-soft)' }}>
@@ -92,8 +94,9 @@ export function Hero() {
     return raw.split('||')
   })
   return (
-    <header id="top" style={{ padding: '108px 0 0' }}>
-      <div style={wrap}>
+    <header id="top" style={{ padding: '108px 0 0', position: 'relative', overflow: 'hidden' }}>
+      <GridCanvas />
+      <div style={{ ...wrap, position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1.15fr .85fr', gap: 64, alignItems: 'end', paddingBottom: 64, borderBottom: '1px solid var(--border-hair)' }}>
           <div>
             <Eyebrow>{t('hero.eyebrow')}</Eyebrow>

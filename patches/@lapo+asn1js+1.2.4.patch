@@ -1,0 +1,35 @@
+diff --git a/node_modules/@lapo/asn1js/asn1.js b/node_modules/@lapo/asn1js/asn1.js
+index 0386b1a..93ba2cd 100644
+--- a/node_modules/@lapo/asn1js/asn1.js
++++ b/node_modules/@lapo/asn1js/asn1.js
+@@ -1,22 +1,3 @@
+-// ASN.1 JavaScript decoder
+-// Copyright (c) 2008-2022 Lapo Luchini <lapo@lapo.it>
+-
+-// Permission to use, copy, modify, and/or distribute this software for any
+-// purpose with or without fee is hereby granted, provided that the above
+-// copyright notice and this permission notice appear in all copies.
+-// 
+-// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+-// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+-// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+-// ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+-// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+-// ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+-// OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-
+-(typeof define != 'undefined' ? define : function (factory) { 'use strict';
+-    if (typeof module == 'object') module.exports = factory(function (name) { return require(name); });
+-    else window.asn1 = factory(function (name) { return window[name.substring(2)]; });
+-})(function (require) {
+ "use strict";
+ 
+ var Int10 = require('./int10'),
+@@ -593,6 +574,4 @@ ASN1.decode = function (stream, offset) {
+     return new ASN1(streamStart, header, len, tag, tagLen, sub);
+ };
+ 
+-return ASN1;
+-
+-});
++module.exports = ASN1;
