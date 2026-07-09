@@ -61,7 +61,7 @@ export function BrainCanvas() {
 
     let globalTime = 0
     const canvasSize = 400
-    const accentColor = '61, 90, 115' // RGB of --color-steel (#3d5a73)
+    const accentColor = '47, 91, 234' // RGB of --color-steel (#2f5bea - cobalt)
     const connectionDist = 38        // Max 3D distance to form a neural line (scaled up with radius)
 
     const initBrain = () => {

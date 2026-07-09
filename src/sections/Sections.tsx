@@ -52,7 +52,7 @@ export function Nav({ currentHash = '' }: { currentHash?: string }) {
     [t('nav.tools'), '#tools'],
   ]
   return (
-    <nav style={{ position: 'sticky', top: 0, zIndex: 20, background: 'rgba(238,240,242,.86)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-hair-soft)' }}>
+    <nav style={{ position: 'sticky', top: 0, zIndex: 20, background: 'rgba(251,251,250,.86)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-hair-soft)' }}>
       <div className="site-nav-inner" style={{ ...wrap, padding: '16px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <a href="#top" style={{ textDecoration: 'none' }}><BrandMark /></a>
         <div className="site-nav-links" style={{ display: 'flex', gap: 36, fontSize: 14, fontWeight: 500 }}>

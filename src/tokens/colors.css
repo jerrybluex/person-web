@@ -1,36 +1,35 @@
-/* NEXMIND AI — Color tokens (Cool-Editorial direction)
- * A calm, non-"tech" palette: cool off-white canvas, graphite-slate ink, one
- * restrained steel-blue accent, and a cool dark block for inversion. No warm
- * tones, no gradients, no glow. Structure comes from hairlines and whitespace.
+/* NEXMIND AI — Color tokens (Warm-Cream & Cobalt-Accent direction)
+ * A clean, premium palette: warm off-white canvas, ink-black typography,
+ * a punchy cobalt blue accent, and deep black dark blocks.
  */
 :root {
-  /* ---- Cool neutrals (page + surfaces) ---- */
-  --color-paper: #eef0f2;     /* page canvas — cool off-white */
-  --color-paper-2: #e6e9ec;   /* slightly recessed cool grey */
-  --color-card: #f7f8f9;      /* hover / raised card fill */
-  --color-white: #ffffff;     /* form + intake panels */
+  /* ---- Warm neutrals (page + surfaces) ---- */
+  --color-paper: #fbfbfa;     /* page canvas — warm off-white */
+  --color-paper-2: #f4f4f2;   /* slightly recessed warm grey */
+  --color-card: #ffffff;      /* hover / raised card fill */
+  --color-white: #ffffff;     /* form + panels */
 
-  /* ---- Ink ramp (cool, graphite) ---- */
-  --color-slate-ink: #1a2330; /* primary text, near-black (cool) */
-  --color-slate-2: #3a4659;   /* strong secondary / form labels */
-  --color-muted: #626c7a;     /* body secondary text */
-  --color-faint: #949ba6;     /* tertiary / captions */
+  /* ---- Ink ramp (deep, graphite-black) ---- */
+  --color-slate-ink: #0c0d10; /* primary text, near-black */
+  --color-slate-2: #1b1d22;   /* strong secondary / form labels */
+  --color-muted: #5c6068;     /* body secondary text */
+  --color-faint: #868a93;     /* tertiary / captions */
 
-  /* ---- Cool dark block (inverted sections — NO glow) ---- */
-  --color-dark: #161c26;
-  --color-dark-2: #1f2733;
+  /* ---- Deep dark block (inverted sections) ---- */
+  --color-dark: #0a0a0c;      /* deep black */
+  --color-dark-2: #0f1013;    /* recessed black */
 
-  /* ---- The single restrained accent ---- */
-  --color-steel: #3d5a73;       /* eyebrows, focus, small marks */
-  --color-steel-bright: #4f7390;/* hover / brighter steel */
-  --color-steel-soft: #cdd7df;  /* faint steel for inverted captions */
+  /* ---- The single restrained accent (cobalt blue) ---- */
+  --color-steel: #2f5bea;       /* eyebrows, focus, small marks */
+  --color-steel-bright: #1d4ed8;/* hover / brighter cobalt */
+  --color-steel-soft: #93c5fd;  /* faint cobalt for inverted captions */
 
   /* ---- Borders (hairlines do the structural work) ---- */
-  --border-hair: rgba(26, 35, 48, 0.14);
-  --border-hair-soft: rgba(26, 35, 48, 0.08);
-  --border-hair-strong: rgba(26, 35, 48, 0.26);
-  --border-on-dark: rgba(255, 255, 255, 0.14);
-  --border-on-dark-soft: rgba(255, 255, 255, 0.10);
+  --border-hair: rgba(12, 13, 16, 0.085);
+  --border-hair-soft: rgba(12, 13, 16, 0.05);
+  --border-hair-strong: rgba(12, 13, 16, 0.24);
+  --border-on-dark: rgba(255, 255, 255, 0.085);
+  --border-on-dark-soft: rgba(255, 255, 255, 0.05);
 
   /* ---- Semantic aliases ---- */
   --bg-page: var(--color-paper);

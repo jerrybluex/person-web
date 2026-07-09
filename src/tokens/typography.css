@@ -3,8 +3,9 @@
  */
 :root {
   /* ---- Families ---- */
-  --font-sans: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei UI', 'Microsoft YaHei', system-ui, sans-serif;
-  --font-display: 'Noto Sans SC', 'Inter', 'PingFang SC', 'Microsoft YaHei UI', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei UI', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   /* ---- Weights ---- */
   --weight-light: 300;
