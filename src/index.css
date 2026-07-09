@@ -40,4 +40,20 @@ a {
   .site-nav-action {
     display: none !important;
   }
+
+  .hero-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    text-align: center;
+  }
+
+  .hero-content-grid > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content-grid p {
+    max-width: 100% !important;
+  }
 }

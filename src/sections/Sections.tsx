@@ -10,6 +10,7 @@ import { BrandMark } from '../components/BrandMark'
 import { useLang } from '../i18n/LangContext'
 import { zh } from '../i18n/zh'
 import { GridCanvas } from '../components/GridCanvas'
+import { BrainCanvas } from '../components/BrainCanvas'
 
 const wrap: React.CSSProperties = { maxWidth: 1120, margin: '0 auto', padding: '0 40px' }
 
@@ -97,19 +98,20 @@ export function Hero() {
     <header id="top" style={{ padding: '108px 0 0', position: 'relative', overflow: 'hidden' }}>
       <GridCanvas />
       <div style={{ ...wrap, position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.15fr .85fr', gap: 64, alignItems: 'end', paddingBottom: 64, borderBottom: '1px solid var(--border-hair)' }}>
+        <div className="hero-content-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center', paddingBottom: 64, borderBottom: '1px solid var(--border-hair)' }}>
           <div>
             <Eyebrow>{t('hero.eyebrow')}</Eyebrow>
-            <h1 style={{ font: 'var(--type-hero)', letterSpacing: 'var(--tracking-display)', margin: '26px 0 0' }}>{t('hero.title1')}<br />{t('hero.title2')}</h1>
-          </div>
-          <div style={{ paddingBottom: 6 }}>
-            <p style={{ fontSize: 'var(--text-lead)', lineHeight: 'var(--leading-body)', color: 'var(--color-muted)', margin: 0 }}>
+            <h1 style={{ font: 'var(--type-hero)', letterSpacing: 'var(--tracking-display)', margin: '26px 0 24px' }}>{t('hero.title1')}<br />{t('hero.title2')}</h1>
+            <p style={{ fontSize: 'var(--text-lead)', lineHeight: 'var(--leading-body)', color: 'var(--color-muted)', margin: '0 0 30px', maxWidth: 540 }}>
               {t('hero.lead')}
             </p>
-            <div style={{ display: 'flex', gap: 12, marginTop: 30 }}>
+            <div style={{ display: 'flex', gap: 12 }}>
               <Button as="a" href="#contact">{t('hero.ctaPrimary')}</Button>
               <Button variant="ghost" as="a" href="#services">{t('hero.ctaSecondary')}</Button>
             </div>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <BrainCanvas />
           </div>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
