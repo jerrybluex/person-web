@@ -6,13 +6,26 @@ export function BrandMark({ name = 'swarq', size = 44, style }: {
   style?: CSSProperties
 }) {
   return (
-    <span style={{ display: 'inline-flex', alignItems: 'center', minWidth: size * 3.95, ...style }} aria-label={name}>
-      <img
-        src="/logo-swarq.png"
-        alt=""
-        aria-hidden="true"
-        style={{ display: 'block', height: size, width: 'auto', filter: 'contrast(1.14) saturate(1.08)' }}
-      />
+    <span
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        color: '#5faef2',
+        fontFamily: "'Pixelify Sans', 'JetBrains Mono', monospace",
+        fontSize: size,
+        fontWeight: 400,
+        lineHeight: 1,
+        letterSpacing: '.03em',
+        textTransform: 'lowercase',
+        textShadow: '2px 2px 0 rgba(26, 35, 48, 0.28)',
+        WebkitFontSmoothing: 'none',
+        MozOsxFontSmoothing: 'auto',
+        imageRendering: 'pixelated',
+        ...style
+      }}
+      aria-label={name}
+    >
+      {name}
     </span>
   )
 }

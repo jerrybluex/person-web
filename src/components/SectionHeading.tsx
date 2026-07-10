@@ -19,7 +19,7 @@ export function SectionHeading({ eyebrow, title, sub, tone = 'light', align = 'l
           margin: '16px 0 0',
           font: 'var(--type-h2)',
           letterSpacing: 'var(--tracking-display)',
-          color: onDark ? 'var(--color-paper)' : 'var(--color-slate-ink)',
+          color: onDark ? 'var(--text-on-dark)' : 'var(--color-slate-ink)',
         }}
       >
         {title}
@@ -30,7 +30,7 @@ export function SectionHeading({ eyebrow, title, sub, tone = 'light', align = 'l
             margin: '18px 0 0',
             fontSize: 'var(--text-lead)',
             lineHeight: 'var(--leading-body)',
-            color: onDark ? 'rgba(238,240,242,.6)' : 'var(--color-muted)',
+            color: onDark ? 'var(--color-muted)' : 'var(--color-muted)',
             maxWidth: '54ch',
             marginInline: align === 'center' ? 'auto' : undefined,
           }}

@@ -16,7 +16,8 @@ export function ServiceCard({ index, label, title, body, style }: {
       style={{
         padding: '40px 32px 44px',
         background: hover ? 'var(--color-card)' : 'transparent',
-        transition: 'background var(--dur-slow) var(--ease-out)',
+        transition: 'all var(--dur-slow) var(--ease-out)',
+        boxShadow: hover ? 'var(--shadow-card)' : 'none',
         ...style,
       }}
     >

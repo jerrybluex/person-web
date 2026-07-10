@@ -19,13 +19,13 @@ export function CapabilityRow({ index, children, style }: {
         paddingLeft: hover ? '8px' : 0,
         borderBottom: '1px solid var(--border-on-dark-soft)',
         fontSize: '17px',
-        color: 'var(--color-paper)',
+        color: 'var(--text-on-dark)',
         transition: 'padding-left var(--dur) var(--ease-out)',
         ...style,
       }}
     >
       {index && (
-        <i style={{ fontStyle: 'normal', fontSize: '12px', color: '#7f93a3', letterSpacing: '.08em', width: '34px', flex: 'none' }}>
+        <i style={{ fontStyle: 'normal', fontSize: '12px', color: 'var(--color-steel)', letterSpacing: '.08em', width: '34px', flex: 'none' }}>
           {index}
         </i>
       )}

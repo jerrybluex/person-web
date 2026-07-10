@@ -10,7 +10,7 @@ export function Button({ variant = 'primary', size = 'md', as = 'button', childr
   [key: string]: unknown
 }) {
   const [hover, setHover] = useState(false)
-  const pad = size === 'sm' ? '10px 18px' : size === 'lg' ? '16px 30px' : '14px 26px'
+  const pad = size === 'sm' ? '10px 20px' : size === 'lg' ? '16px 32px' : '14px 28px'
   const fs = size === 'sm' ? '14px' : '15px'
   const base: CSSProperties = {
     display: 'inline-block',
@@ -24,17 +24,23 @@ export function Button({ variant = 'primary', size = 'md', as = 'button', childr
     cursor: 'pointer',
     border: '1px solid transparent',
     textDecoration: 'none',
-    transition: 'background var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out)',
+    transition: 'all var(--dur) var(--ease-out)',
   }
   const variants: Record<string, CSSProperties> = {
     primary: {
-      background: hover ? '#000' : 'var(--color-slate-ink)',
-      color: 'var(--color-paper)',
+      background: hover
+        ? 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)'
+        : 'linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%)',
+      color: '#ffffff',
+      boxShadow: hover ? 'var(--shadow-glow-strong)' : 'var(--shadow-glow)',
+      border: '1px solid rgba(139, 92, 246, 0.30)',
+      transform: hover ? 'translateY(-1px)' : 'none',
     },
     ghost: {
-      background: 'transparent',
-      color: 'var(--color-slate-ink)',
-      borderColor: hover ? 'var(--color-slate-ink)' : 'var(--border-hair)',
+      background: hover ? 'rgba(139, 92, 246, 0.10)' : 'transparent',
+      color: hover ? 'var(--color-steel-bright)' : 'var(--color-slate-2)',
+      borderColor: hover ? 'var(--border-hair-strong)' : 'var(--border-hair)',
+      boxShadow: hover ? '0 0 12px rgba(139, 92, 246, 0.08)' : 'none',
     },
   }
   const Tag = as as ElementType

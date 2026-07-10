@@ -1,29 +1,30 @@
-/* NEXMIND AI — Radii, effects, motion (Cool-Editorial direction)
- * Sharp is the new brand constant: a near-square 2px radius on buttons, inputs,
- * cards and blocks. Depth comes from HAIRLINES and WHITESPACE — not shadow, not
- * glow, not gradient. A single faint elevation shadow exists for optional lift.
+/* NEXMIND AI — Radii, effects, motion (Young-Tech direction)
+ * Rounded is the new brand constant: smooth 12px radius on buttons, inputs,
+ * cards and blocks. Depth comes from GLOW and ELEVATION — purple-lit shadows
+ * and soft neon borders. Motion is snappy and springy.
  */
 :root {
-  /* ---- Corner radii (sharp/editorial) ---- */
-  --radius-sm: 2px;
-  --radius: 2px;          /* THE brand radius — buttons, inputs, cards, blocks */
-  --radius-md: 4px;       /* large inverted blocks / intake panel */
-  --radius-pill: 999px;   /* reserved (rarely used in this direction) */
+  /* ---- Corner radii (rounded/tech) ---- */
+  --radius-sm: 6px;
+  --radius: 12px;          /* THE brand radius — buttons, inputs, cards, blocks */
+  --radius-md: 16px;       /* large inverted blocks / intake panel */
+  --radius-pill: 999px;   /* pills, tags */
 
-  /* ---- Elevation (used sparingly; structure prefers borders) ---- */
-  --shadow-card: 0 1px 0 rgba(26, 35, 48, 0.04);
-  --shadow-pop: 0 24px 60px -36px rgba(26, 35, 48, 0.28);
+  /* ---- Elevation (glow + lift for dark theme) ---- */
+  --shadow-card: 0 2px 8px rgba(139, 92, 246, 0.06), 0 0 1px rgba(139, 92, 246, 0.10);
+  --shadow-pop: 0 24px 60px -12px rgba(139, 92, 246, 0.20), 0 0 40px rgba(139, 92, 246, 0.06);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.15);
+  --shadow-glow-strong: 0 0 40px rgba(139, 92, 246, 0.25);
 
-  /* ---- Backdrop blur (sticky nav only) ---- */
-  --blur-nav: 12px;
+  /* ---- Backdrop blur (nav + overlays) ---- */
+  --blur-nav: 16px;
 
-  /* ---- Motion ---- */
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  /* ---- Motion (springy, energetic) ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind spring */
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
-  --dur-fast: 140ms; /* @kind other */
-  --dur: 200ms; /* @kind other */
-  --dur-slow: 360ms; /* @kind other */
-  /* Interaction feel: hover lifts muted text → ink and brightens hairline → ink;
-     cards get a faint card fill on hover; rows nudge 8px right. No scale, no
-     bounce, no glow. Quiet and precise. */
+  --dur-fast: 120ms; /* @kind other */
+  --dur: 180ms; /* @kind other */
+  --dur-slow: 300ms; /* @kind other */
+  /* Interaction feel: hover lifts text brightness, cards glow with violet shadow,
+     buttons pulse with gradient shift. Everything feels alive and responsive. */
 }

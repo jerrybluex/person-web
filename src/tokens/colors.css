@@ -1,35 +1,40 @@
-/* NEXMIND AI — Color tokens (Warm-Cream & Cobalt-Accent direction)
- * A clean, premium palette: warm off-white canvas, ink-black typography,
- * a punchy cobalt blue accent, and deep black dark blocks.
+/* NEXMIND AI — Color tokens (Young-Tech direction)
+ * A dark, vibrant tech palette: deep dark canvas, electric violet accent,
+ * soft glow effects, and crisp white typography for a modern SaaS feel.
  */
 :root {
-  /* ---- Warm neutrals (page + surfaces) ---- */
-  --color-paper: #fbfbfa;     /* page canvas — warm off-white */
-  --color-paper-2: #f4f4f2;   /* slightly recessed warm grey */
-  --color-card: #ffffff;      /* hover / raised card fill */
-  --color-white: #ffffff;     /* form + panels */
+  /* ---- Dark neutrals (page + surfaces) ---- */
+  --color-paper: #0a0a12;     /* page canvas — deep dark navy */
+  --color-paper-2: #12121e;   /* slightly recessed dark */
+  --color-card: #16162a;      /* hover / raised card fill */
+  --color-white: #1a1a30;     /* form + panels */
 
-  /* ---- Ink ramp (deep, graphite-black) ---- */
-  --color-slate-ink: #0c0d10; /* primary text, near-black */
-  --color-slate-2: #1b1d22;   /* strong secondary / form labels */
-  --color-muted: #5c6068;     /* body secondary text */
-  --color-faint: #868a93;     /* tertiary / captions */
+  /* ---- Bright text ramp (on dark) ---- */
+  --color-slate-ink: #f0f0f5; /* primary text — near-white */
+  --color-slate-2: #c8c8d8;   /* strong secondary / form labels */
+  --color-muted: #8888a8;     /* body secondary text */
+  --color-faint: #606080;     /* tertiary / captions */
 
   /* ---- Deep dark block (inverted sections) ---- */
-  --color-dark: #0a0a0c;      /* deep black */
-  --color-dark-2: #0f1013;    /* recessed black */
+  --color-dark: #060610;      /* deepest black */
+  --color-dark-2: #0c0c1a;    /* recessed black */
 
-  /* ---- The single restrained accent (cobalt blue) ---- */
-  --color-steel: #2f5bea;       /* eyebrows, focus, small marks */
-  --color-steel-bright: #1d4ed8;/* hover / brighter cobalt */
-  --color-steel-soft: #93c5fd;  /* faint cobalt for inverted captions */
+  /* ---- The electric accent (violet-cyan gradient feel) ---- */
+  --color-steel: #8b5cf6;       /* eyebrows, focus, small marks — electric violet */
+  --color-steel-bright: #a78bfa;/* hover / brighter violet */
+  --color-steel-soft: #c4b5fd;  /* faint violet for inverted captions */
+  --color-accent-secondary: #06b6d4; /* cyan complement for variety */
 
-  /* ---- Borders (hairlines do the structural work) ---- */
-  --border-hair: rgba(12, 13, 16, 0.085);
-  --border-hair-soft: rgba(12, 13, 16, 0.05);
-  --border-hair-strong: rgba(12, 13, 16, 0.24);
-  --border-on-dark: rgba(255, 255, 255, 0.085);
-  --border-on-dark-soft: rgba(255, 255, 255, 0.05);
+  /* ---- Borders (soft glowing hairlines) ---- */
+  --border-hair: rgba(139, 92, 246, 0.12);
+  --border-hair-soft: rgba(139, 92, 246, 0.06);
+  --border-hair-strong: rgba(139, 92, 246, 0.30);
+  --border-on-dark: rgba(255, 255, 255, 0.08);
+  --border-on-dark-soft: rgba(255, 255, 255, 0.04);
+
+  /* ---- Glow effects (young-tech signature) ---- */
+  --glow-primary: rgba(139, 92, 246, 0.15);
+  --glow-strong: rgba(139, 92, 246, 0.25);
 
   /* ---- Semantic aliases ---- */
   --bg-page: var(--color-paper);
@@ -40,7 +45,7 @@
   --text-primary: var(--color-slate-ink);
   --text-secondary: var(--color-muted);
   --text-muted: var(--color-faint);
-  --text-on-dark: var(--color-paper);
+  --text-on-dark: #f0f0f5; /* bright text on dark surfaces */
 
   --accent: var(--color-steel);
   --focus-ring: var(--color-steel);

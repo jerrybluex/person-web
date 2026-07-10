@@ -25,14 +25,14 @@ function LangToggle() {
       style={{
         background: 'transparent',
         border: '1px solid',
-        borderColor: hover ? 'var(--color-slate-ink)' : 'var(--border-hair)',
+        borderColor: hover ? 'var(--color-steel)' : 'var(--border-hair)',
         padding: '6px 12px',
-        borderRadius: 'var(--radius)',
+        borderRadius: 'var(--radius-sm)',
         fontFamily: 'var(--font-sans)',
         fontSize: '12px',
         fontWeight: 600,
         letterSpacing: '.04em',
-        color: hover ? 'var(--color-slate-ink)' : 'var(--color-muted)',
+        color: hover ? 'var(--color-steel-bright)' : 'var(--color-muted)',
         cursor: 'pointer',
         transition: 'all var(--dur) var(--ease-out)',
       }}
@@ -52,7 +52,7 @@ export function Nav({ currentHash = '' }: { currentHash?: string }) {
     [t('nav.tools'), '#tools'],
   ]
   return (
-    <nav style={{ position: 'sticky', top: 0, zIndex: 20, background: 'rgba(251,251,250,.86)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-hair-soft)' }}>
+    <nav style={{ position: 'sticky', top: 0, zIndex: 20, background: 'rgba(10,10,18,.80)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--border-hair-soft)' }}>
       <div className="site-nav-inner" style={{ ...wrap, padding: '16px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <a href="#top" style={{ textDecoration: 'none' }}><BrandMark /></a>
         <div className="site-nav-links" style={{ display: 'flex', gap: 36, fontSize: 14, fontWeight: 500 }}>
@@ -67,7 +67,7 @@ export function Nav({ currentHash = '' }: { currentHash?: string }) {
                   textDecoration: 'none',
                   transition: 'color var(--dur) var(--ease-out)'
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-slate-ink)')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-steel-bright)')}
                 onMouseLeave={(e) => {
                   if (!isActive) {
                     e.currentTarget.style.color = 'var(--color-muted)'

@@ -13,7 +13,7 @@ export function Intake() {
   return (
     <section id="contact" style={{ paddingBottom: 104 }}>
       <div style={wrap}>
-        <div style={{ display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 64, background: 'var(--color-white)', border: '1px solid var(--border-hair)', borderRadius: 'var(--radius-md)', padding: 60 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 64, background: 'var(--color-card)', border: '1px solid var(--border-hair)', borderRadius: 'var(--radius-md)', padding: 60 }}>
           <div>
             <Eyebrow>{t('intake.eyebrow')}</Eyebrow>
             <h2 style={{ font: 'var(--type-h2)', letterSpacing: 'var(--tracking-display)', margin: '16px 0 16px' }}>{t('intake.title1')}<br />{t('intake.title2')}</h2>

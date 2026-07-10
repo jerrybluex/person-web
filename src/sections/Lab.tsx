@@ -168,7 +168,7 @@ function FilterTab({ label, active, onClick }: { label: string; active: boolean;
       onMouseLeave={() => setHover(false)}
       style={{
         background: active ? 'var(--color-slate-ink)' : 'transparent',
-        color: active ? 'var(--color-paper)' : (hover ? 'var(--color-slate-ink)' : 'var(--color-muted)'),
+        color: active ? '#ffffff' : (hover ? 'var(--color-slate-ink)' : 'var(--color-muted)'),
         border: '1px solid',
         borderColor: active ? 'var(--color-slate-ink)' : (hover ? 'var(--color-slate-ink)' : 'var(--border-hair)'),
         padding: '8px 16px',
@@ -191,8 +191,8 @@ function ProjectCard({ project, description }: { project: Project; description: 
 
   const catColors: Record<string, string> = {
     'AI & Agents': 'var(--color-steel)',
-    'Web & Desktop': '#3572A5',
-    'Developer Tools': '#4a5d4e'
+    'Web & Desktop': '#06b6d4',
+    'Developer Tools': '#10b981'
   }
 
   return (
@@ -289,10 +289,11 @@ function ProjectCard({ project, description }: { project: Project; description: 
               style={{
                 fontSize: 11,
                 padding: '3px 8px',
-                background: 'var(--color-paper)',
+                background: 'rgba(139, 92, 246, 0.08)',
                 color: 'var(--color-muted)',
                 borderRadius: 'var(--radius-sm)',
-                fontWeight: 500
+                fontWeight: 500,
+                border: '1px solid var(--border-hair-soft)'
               }}
             >
               {tag}

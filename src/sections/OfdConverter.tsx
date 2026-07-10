@@ -160,13 +160,13 @@ export function OfdConverter() {
 
   return (
     <div className="ofd-converter-card" style={{
-      background: 'var(--color-white)',
+      background: 'var(--color-card)',
       border: '1px solid var(--border-hair-soft)',
       borderRadius: 'var(--radius-md)',
       padding: '40px',
       maxWidth: '880px',
       margin: '0 auto',
-      boxShadow: '0 4px 20px rgba(26, 35, 48, 0.02)'
+      boxShadow: 'var(--shadow-card)'
     }}>
       {/* Dynamic Style Tag for Print Media Formatting */}
       <style dangerouslySetInnerHTML={{ __html: `
@@ -255,7 +255,7 @@ export function OfdConverter() {
             padding: '64px 32px',
             textAlign: 'center',
             cursor: 'pointer',
-            background: isDragOver ? 'var(--color-paper)' : 'transparent',
+            background: isDragOver ? 'rgba(139, 92, 246, 0.06)' : 'transparent',
             transition: 'all var(--dur) var(--ease-out)',
             display: 'flex',
             flexDirection: 'column',
@@ -324,7 +324,7 @@ export function OfdConverter() {
             width: '40px',
             height: '40px',
             border: '3px solid var(--border-hair-strong)',
-            borderTop: '3px solid var(--color-steel)',
+          borderTop: '3px solid var(--color-steel)',
             borderRadius: '50%',
             animation: 'spin 1s linear infinite',
             marginBottom: '24px'

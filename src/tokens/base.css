@@ -1,5 +1,5 @@
-/* NEXMIND AI — Base reset & document defaults (Cool-Editorial direction).
- * Cool off-white canvas, graphite-slate ink, medium-weight headings, steel focus.
+/* NEXMIND AI — Base reset & document defaults (Young-Tech direction).
+ * Deep dark canvas, crisp white typography, violet focus, glow interactions.
  */
 * {
   box-sizing: border-box;
@@ -54,8 +54,8 @@ button, a {
 }
 
 ::selection {
-  background: var(--color-slate-ink);
-  color: var(--color-paper);
+  background: var(--color-steel);
+  color: #ffffff;
 }
 
 :focus-visible {
