@@ -14,15 +14,16 @@ export function ServiceCard({ index, label, title, body, style }: {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
-        padding: '40px 32px 44px',
-        background: hover ? 'var(--color-card)' : 'transparent',
+        padding: '34px 30px 38px',
+        background: hover ? 'linear-gradient(180deg, rgba(17, 24, 33, 0.96), rgba(12, 18, 25, 0.96))' : 'rgba(243, 247, 244, 0.015)',
         transition: 'all var(--dur-slow) var(--ease-out)',
         boxShadow: hover ? 'var(--shadow-card)' : 'none',
+        transform: hover ? 'translateY(-2px)' : 'none',
         ...style,
       }}
     >
       {index && (
-        <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--color-steel)', letterSpacing: '.1em' }}>
+        <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--color-steel-bright)', letterSpacing: '.08em', fontFamily: 'var(--font-mono)' }}>
           {index}
         </div>
       )}

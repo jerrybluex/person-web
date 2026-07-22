@@ -1,30 +1,20 @@
-/* NEXMIND AI — Radii, effects, motion (Young-Tech direction)
- * Rounded is the new brand constant: smooth 12px radius on buttons, inputs,
- * cards and blocks. Depth comes from GLOW and ELEVATION — purple-lit shadows
- * and soft neon borders. Motion is snappy and springy.
- */
+/* NEXMIND AI radii, depth, and motion. */
 :root {
-  /* ---- Corner radii (rounded/tech) ---- */
   --radius-sm: 6px;
-  --radius: 12px;          /* THE brand radius — buttons, inputs, cards, blocks */
-  --radius-md: 16px;       /* large inverted blocks / intake panel */
-  --radius-pill: 999px;   /* pills, tags */
+  --radius: 8px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
 
-  /* ---- Elevation (glow + lift for dark theme) ---- */
-  --shadow-card: 0 2px 8px rgba(139, 92, 246, 0.06), 0 0 1px rgba(139, 92, 246, 0.10);
-  --shadow-pop: 0 24px 60px -12px rgba(139, 92, 246, 0.20), 0 0 40px rgba(139, 92, 246, 0.06);
-  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.15);
-  --shadow-glow-strong: 0 0 40px rgba(139, 92, 246, 0.25);
+  --shadow-card: 0 18px 54px -32px rgba(0, 0, 0, 0.92), 0 0 0 1px rgba(141, 248, 234, 0.08);
+  --shadow-pop: 0 30px 80px -42px rgba(0, 0, 0, 0.95), 0 0 48px rgba(79, 209, 197, 0.08);
+  --shadow-glow: 0 0 22px rgba(79, 209, 197, 0.12);
+  --shadow-glow-strong: 0 0 36px rgba(79, 209, 197, 0.20);
 
-  /* ---- Backdrop blur (nav + overlays) ---- */
-  --blur-nav: 16px;
+  --blur-nav: 18px;
 
-  /* ---- Motion (springy, energetic) ---- */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind spring */
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
-  --dur-fast: 120ms; /* @kind other */
-  --dur: 180ms; /* @kind other */
-  --dur-slow: 300ms; /* @kind other */
-  /* Interaction feel: hover lifts text brightness, cards glow with violet shadow,
-     buttons pulse with gradient shift. Everything feels alive and responsive. */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur: 180ms;
+  --dur-slow: 300ms;
 }

@@ -1,28 +1,21 @@
-/* NEXMIND AI — Typography tokens (Young-Tech direction)
- * Clean, modern typography with Inter body, Space Grotesk displays.
- * Slightly tighter leading for dark-mode readability.
- */
+/* NEXMIND AI typography tokens. */
 :root {
-  /* ---- Families ---- */
   --font-sans: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei UI', 'Microsoft YaHei', system-ui, sans-serif;
-  --font-display: 'Space Grotesk', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei UI', system-ui, sans-serif;
+  --font-display: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei UI', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-  /* ---- Weights ---- */
   --weight-light: 300;
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
-  --weight-display: 700;
+  --weight-display: 760;
 
-  /* ---- Display / heading scale ---- */
-  --text-hero: clamp(48px, 6vw, 72px);
-  --text-h2: clamp(32px, 4vw, 44px);
+  --text-hero: clamp(48px, 6vw, 76px);
+  --text-h2: clamp(32px, 4vw, 46px);
   --text-h3: 24px;
   --text-h4: 19px;
 
-  /* ---- Body / UI scale ---- */
   --text-lead: 18px;
   --text-body: 16px;
   --text-sm: 15px;
@@ -30,21 +23,18 @@
   --text-xs: 13px;
   --text-eyebrow: 12px;
 
-  /* ---- Line heights (slightly tighter for dark mode) ---- */
-  --leading-display: 1.05;
+  --leading-display: 1.03;
   --leading-tight: 1.12;
   --leading-snug: 1.2;
   --leading-normal: 1.5;
   --leading-body: 1.65;
 
-  /* ---- Letter spacing ---- */
-  --tracking-display: -0.02em;
-  --tracking-tight: -0.01em;
+  --tracking-display: 0;
+  --tracking-tight: 0;
   --tracking-normal: 0;
   --tracking-wide: 0.04em;
-  --tracking-eyebrow: 0.18em;
+  --tracking-eyebrow: 0.14em;
 
-  /* ---- Composed semantic roles ---- */
   --type-hero: var(--weight-display) var(--text-hero)/var(--leading-display) var(--font-display);
   --type-h2: var(--weight-semibold) var(--text-h2)/var(--leading-tight) var(--font-display);
   --type-h3: var(--weight-semibold) var(--text-h3)/var(--leading-snug) var(--font-display);

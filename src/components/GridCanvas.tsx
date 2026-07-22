@@ -44,8 +44,8 @@ export function GridCanvas() {
     let dataPackets: DataPacket[] = []
 
     const gridSize = 60 // Grid spacing in pixels
-    const accentColor = '139, 92, 246' // RGB of --color-steel (#8b5cf6 - electric violet)
-    const baseColor = '240, 240, 245'    // RGB of --color-slate-ink (#f0f0f5 - near-white)
+    const accentColor = '79, 209, 197'
+    const baseColor = '243, 247, 244'
 
     const initCanvas = () => {
       const rect = container.getBoundingClientRect()

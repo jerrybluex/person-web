@@ -12,10 +12,11 @@ export function Eyebrow({ children, tone = 'steel', style, ...rest }: {
       style={{
         margin: 0,
         fontSize: 'var(--text-eyebrow)',
-        fontWeight: 600,
+        fontWeight: 700,
         letterSpacing: 'var(--tracking-eyebrow)',
         textTransform: 'uppercase',
         color,
+        fontFamily: 'var(--font-mono)',
         ...style,
       }}
       {...rest}

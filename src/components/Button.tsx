@@ -13,7 +13,9 @@ export function Button({ variant = 'primary', size = 'md', as = 'button', childr
   const pad = size === 'sm' ? '10px 20px' : size === 'lg' ? '16px 32px' : '14px 28px'
   const fs = size === 'sm' ? '14px' : '15px'
   const base: CSSProperties = {
-    display: 'inline-block',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: pad,
     borderRadius: 'var(--radius)',
     fontFamily: 'var(--font-sans)',
@@ -29,18 +31,18 @@ export function Button({ variant = 'primary', size = 'md', as = 'button', childr
   const variants: Record<string, CSSProperties> = {
     primary: {
       background: hover
-        ? 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)'
-        : 'linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%)',
-      color: '#ffffff',
+        ? 'linear-gradient(135deg, #8df8ea 0%, #9d7cff 100%)'
+        : 'linear-gradient(135deg, #4fd1c5 0%, #8df8ea 100%)',
+      color: '#04100f',
       boxShadow: hover ? 'var(--shadow-glow-strong)' : 'var(--shadow-glow)',
-      border: '1px solid rgba(139, 92, 246, 0.30)',
+      border: '1px solid rgba(141, 248, 234, 0.42)',
       transform: hover ? 'translateY(-1px)' : 'none',
     },
     ghost: {
-      background: hover ? 'rgba(139, 92, 246, 0.10)' : 'transparent',
+      background: hover ? 'rgba(141, 248, 234, 0.08)' : 'rgba(243, 247, 244, 0.02)',
       color: hover ? 'var(--color-steel-bright)' : 'var(--color-slate-2)',
       borderColor: hover ? 'var(--border-hair-strong)' : 'var(--border-hair)',
-      boxShadow: hover ? '0 0 12px rgba(139, 92, 246, 0.08)' : 'none',
+      boxShadow: hover ? '0 0 18px rgba(79, 209, 197, 0.10)' : 'none',
     },
   }
   const Tag = as as ElementType
