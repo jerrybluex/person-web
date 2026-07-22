@@ -167,16 +167,17 @@ function FilterTab({ label, active, onClick }: { label: string; active: boolean;
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
-        background: active ? 'var(--color-slate-ink)' : 'transparent',
-        color: active ? '#ffffff' : (hover ? 'var(--color-slate-ink)' : 'var(--color-muted)'),
+        background: active ? 'var(--color-steel-bright)' : (hover ? 'rgba(141, 248, 234, 0.08)' : 'transparent'),
+        color: active ? 'var(--color-paper)' : (hover ? 'var(--color-slate-ink)' : 'var(--color-muted)'),
         border: '1px solid',
-        borderColor: active ? 'var(--color-slate-ink)' : (hover ? 'var(--color-slate-ink)' : 'var(--border-hair)'),
+        borderColor: active ? 'var(--color-steel-bright)' : (hover ? 'var(--border-hair-strong)' : 'var(--border-hair)'),
         padding: '8px 16px',
         borderRadius: 'var(--radius)',
         fontFamily: 'var(--font-sans)',
         fontSize: '14px',
         fontWeight: 600,
         cursor: 'pointer',
+        boxShadow: active ? 'var(--shadow-glow)' : 'none',
         transition: 'all var(--dur) var(--ease-out)',
       }}
     >
