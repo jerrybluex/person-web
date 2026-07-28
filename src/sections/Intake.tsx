@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Eyebrow } from '../components/Eyebrow'
 import { Field } from '../components/Field'
 import { Button } from '../components/Button'
+import { HudCorners, HudLabel } from '../components/hud'
 import { useLang } from '../i18n/LangContext'
 
 const wrap: React.CSSProperties = { maxWidth: 1120, margin: '0 auto', padding: '0 40px' }
@@ -13,7 +14,9 @@ export function Intake() {
   return (
     <section id="contact" style={{ paddingBottom: 104 }}>
       <div style={wrap}>
-        <div style={{ display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 64, background: 'var(--color-card)', border: '1px solid var(--border-hair)', borderRadius: 'var(--radius-md)', padding: 60 }}>
+        <div style={{ position: 'relative', display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 64, background: 'var(--color-card)', border: '1px solid rgba(79, 209, 197, .3)', borderRadius: 4, padding: 60 }}>
+          <HudLabel>INTAKE // PROJECT_FORM</HudLabel>
+          <HudCorners size={18} style={{ opacity: .5 }} />
           <div>
             <Eyebrow>{t('intake.eyebrow')}</Eyebrow>
             <h2 style={{ font: 'var(--type-h2)', letterSpacing: 'var(--tracking-display)', margin: '16px 0 16px' }}>{t('intake.title1')}<br />{t('intake.title2')}</h2>

@@ -25,11 +25,13 @@ export function CapabilityRow({ index, children, style }: {
       }}
     >
       {index && (
-        <i style={{ fontStyle: 'normal', fontSize: '12px', color: 'var(--color-steel)', letterSpacing: '.08em', width: '34px', flex: 'none' }}>
-          {index}
+        <i style={{ fontStyle: 'normal', fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--color-steel)', letterSpacing: '.08em', width: '44px', flex: 'none' }}>
+          [{index}]
         </i>
       )}
-      {children}
+      <span style={{ color: hover ? 'var(--color-steel-bright)' : undefined, textShadow: hover ? '0 0 18px rgba(79, 209, 197, .4)' : 'none', transition: 'color var(--dur) var(--ease-out), text-shadow var(--dur) var(--ease-out)' }}>
+        {children}
+      </span>
     </div>
   )
 }

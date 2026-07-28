@@ -9,6 +9,8 @@ export const zh = {
   },
   hero: {
     eyebrow: '企业 AI 工程 / Enterprise AI Engineering',
+    boot1: 'SYSTEM.BOOT ........ OK',
+    boot2: 'NEURAL_LINK ........ ACTIVE',
     title1: '构建企业自己的',
     title2: 'AI 大脑',
     lead: '交付智能硬件、业务智能体与定制大模型，把分散的数据、设备和流程，聚合成可上线、可运维、可持续进化的 AI 系统。',

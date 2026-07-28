@@ -9,6 +9,8 @@ export const en = {
   },
   hero: {
     eyebrow: 'Enterprise AI Engineering',
+    boot1: 'SYSTEM.BOOT ........ OK',
+    boot2: 'NEURAL_LINK ........ ACTIVE',
     title1: 'Build Your Own',
     title2: 'AI Brain',
     lead: 'Delivering intelligent hardware, business agents, and custom LLMs: converging scattered data, devices, and workflows into deployable, operable, and continuously evolving AI systems.',

@@ -3,6 +3,7 @@ import { Nav, Hero, Services, SystemLayers, Delivery, SiteFooter } from './secti
 import { Intake } from './sections/Intake'
 import { Lab } from './sections/Lab'
 import { Tools } from './sections/Tools'
+import { HudStyle } from './components/hud'
 
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash)
@@ -40,6 +41,7 @@ export default function App() {
 
   return (
     <>
+      <HudStyle />
       <Nav currentHash={currentHash} />
       {isTools ? (
         <Tools />
